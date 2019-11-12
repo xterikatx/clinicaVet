@@ -17,12 +17,12 @@ import javax.persistence.PrePersist;
 @Entity
 public class Animal {
 
-    @Column(Nullable=false)
+    @Column(nullable=false)
     private String name;
     
     @Id
-    @Column(Nullable=false)
-    private Integer cod;
+    @Column(nullable=false)
+    private String cod;
     
     private String postage;
     
@@ -30,12 +30,12 @@ public class Animal {
     
     private String breed;
     
-        public String getId() {
-        return id;
+        public String getCod() {
+        return cod;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCod(String id) {
+        this.cod = cod;
     }
 
     public String getType() {

@@ -16,14 +16,14 @@ import javax.persistence.Id;
 public class Employee {
     
     @Id
-    @Column(Nullable=false)
+    @Column(nullable=false)
     private Integer cpf;
     
-    @Column(Nullable=false)
+    @Column(nullable=false)
     private String name;
     
-    @Column(Nullable=false)
-    private Integer senha;
+    @Column(nullable=false)
+    private Integer password;
     
     
     public void setName(String name){
@@ -32,16 +32,16 @@ public class Employee {
     public String getName(){
         return name;
     }
-    public void setSenha(Integer senha){
-        this.senha=senha;
+    public void setPassword(Integer password){
+        this.password=password;
     }
-    public String getSenha(){
-        return senha;
+    public Integer getPassword(){
+        return password;
     }
     public void setCpf(Integer Cpf){
         this.cpf=cpf;
     }
-    public String getCpf(){
+    public Integer getCpf(){
         return cpf;
     }
 }
