@@ -34,8 +34,7 @@ public class AuthInterceptor implements Interceptor {
             is.next(cm, o);
         }else{
             //redirecionar
-            //linha com erro, irei comentar por enquanto.
-            //result.redirectTo(AuthController.class).signinView();
+            result.redirectTo(AuthController.class).login();
         }
     }
 
