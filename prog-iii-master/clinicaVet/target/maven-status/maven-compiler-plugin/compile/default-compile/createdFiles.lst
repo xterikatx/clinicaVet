@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 br/edu/fjn/clinivet/controller/IndexController.class
 br/edu/fjn/clinivet/annotations/Private.class
 br/edu/fjn/clinivet/vet/Vet.class
@@ -5,3 +6,5 @@ br/edu/fjn/clinivet/vet/Services.class
 br/edu/fjn/clinivet/view/components/UserSession.class
 br/edu/fjn/clinivet/interceptors/AuthInterceptor.class
 br/edu/fjn/clinivet/controller/AuthController.class
+=======
+>>>>>>> c3c7af2da871f844bd0cc86e86d480c4670e5d1b
