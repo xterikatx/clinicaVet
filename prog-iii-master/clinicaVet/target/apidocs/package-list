@@ -1,5 +1,6 @@
 br.edu.fjn.clinivet.annotations
 br.edu.fjn.clinivet.controller
 br.edu.fjn.clinivet.interceptors
+br.edu.fjn.clinivet.repository.util
 br.edu.fjn.clinivet.vet
 br.edu.fjn.clinivet.view.components
