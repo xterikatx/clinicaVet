@@ -34,7 +34,7 @@ public class Animal {
         return cod;
     }
 
-    public void setCod(String id) {
+    public void setCod(String cod) {
         this.cod = cod;
     }
 
