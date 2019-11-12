@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.fjn.clinivet.vet;
+package br.edu.fjn.clinivet.model.vet;
 
+import br.edu.fjn.clinivet.model.customer.Animal;
+import br.edu.fjn.clinivet.model.service.Services;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,6 +39,9 @@ public class Vet {
     @Column(nullable = false)
     private String password;
  
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Animal idAnimal;
+    
     public String getCRM() {
         return CRM;
     }

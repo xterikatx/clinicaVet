@@ -3,30 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.fjn.clinivet.vet;
+package br.edu.fjn.clinivet.model.customer;
 
-import java.util.Random;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.PrePersist;
 
 /**
  *
  * @author aluno
  */
 @Entity
-public class Services {
+public class Customer {
+ 
     @Id
     @Column(nullable = false)
     private String id;
     
     @Column(nullable = false)
-    private String type;
+    private String name;
+    
+    private String adress;
+    
     
     @Column(nullable = false)
-    private Double value;
+    private String cpf;
 
     public String getId() {
         return id;
@@ -35,24 +37,33 @@ public class Services {
     public void setId(String id) {
         this.id = id;
     }
-
-    public String getType() {
-        return type;
+    
+    public String getName() {
+        return name;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Double getValue() {
-        return value;
+    public String getAdress() {
+        return adress;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
-    @PrePersist
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
     public void gerarId(){
         this.id=UUID.randomUUID().toString();
     }
+    
 }
