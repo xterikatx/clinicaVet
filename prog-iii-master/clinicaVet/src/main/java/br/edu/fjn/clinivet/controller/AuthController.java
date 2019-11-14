@@ -31,9 +31,9 @@ public class AuthController {
 
     }
 
-    @Get("authenticate")
+    @Post("authenticate")
     public void signin(String userName, String password) {
-        if (userName.equals("joao") && password.equals("123")) {
+        if (userName.equals("Vinicius") && password.equals("123")) {
             userSession.setUserName(userName);
             result.redirectTo(IndexController.class).index();
         }

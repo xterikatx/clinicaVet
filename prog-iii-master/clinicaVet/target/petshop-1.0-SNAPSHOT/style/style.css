@@ -1,15 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 11-Nov-2019, 18:15:54
-    Author     : vinicius
-*/
-
-body
-       *{
+*{
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -26,9 +15,25 @@ body
   top: -50%;
 }
 
+section.sec1 {
+  width: 100%;
+  height: 100vh;
+  background: url('../image/for.jpg');
+  /* background-image: url(image/for.jpg); */
+  background-size: cover;
+}
+
+section.sec2 {
+  width: 100%;
+  height: 100vh;
+  background: url('../image/.jpg');
+  /* background-image: url(image/for.jpg); */
+  background-size: cover;
+}
+
 body{
   min-height: 100vh;
-  background: white;
+  /* background: url(vetr.jpg); */
   /* background-image: linear-gradient(120deg,#45adf1,#bc50eb); */
 }
 
@@ -43,15 +48,13 @@ body{
   top: 50%;
   transform: translate(-50%,-50%);
   -webkit-box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
--moz-box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
-box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
+  -moz-box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
+  box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
 }
 
 .login-form h1{
   text-align: center;
-  margin-bottom: 60px;
-  
-  
+  margin-bottom: 60px;  
 }
 
 .txtb{
@@ -76,7 +79,7 @@ box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
 .txtb span::before{
   content: attr(data-placeholder);
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 5px;
   color: #adadad;
   transform: translateY(-50%);
@@ -123,8 +126,12 @@ box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
 }
 
 .bottom-text{
-  margin-top: 120px;
+  margin-top: 100px;
   text-align: center;
   font-size: 13px;
 }
-        
+
+#radiobtn{
+  margin-left:5px;
+  margin-top:-40px;
+  }
