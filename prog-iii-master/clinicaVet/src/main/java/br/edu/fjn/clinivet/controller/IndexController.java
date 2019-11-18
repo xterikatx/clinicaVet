@@ -18,6 +18,6 @@ public class IndexController {
     @Private
     @Get("/")
     public void index(){
-        System.out.println("oiii");
+     
     }
 }
