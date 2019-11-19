@@ -17,7 +17,7 @@ public class ConnectionFactory {
      private static final EntityManagerFactory factory
             = Persistence.createEntityManagerFactory("veterinaria");
 
-    public static EntityManager obterGerenciador() {
+    public static EntityManager getManager() {
         return factory.createEntityManager();
     }
     

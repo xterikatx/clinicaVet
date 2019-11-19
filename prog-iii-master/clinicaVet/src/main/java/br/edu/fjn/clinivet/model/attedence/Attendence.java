@@ -16,6 +16,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -27,8 +28,9 @@ public class Attendence {
     @Id
     private Integer id;
     
+    @JoinColumn(name = "idservice")
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Services idservice;
+    private Services service;
     
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Vet crmVet;
@@ -44,12 +46,12 @@ public class Attendence {
         this.id = id;
     }
 
-    public Services getIdservice() {
-        return idservice;
+    public Services getService() {
+        return service;
     }
 
-    public void setIdservice(Services idservice) {
-        this.idservice = idservice;
+    public void setService(Services service) {
+        this.service = service;
     }
 
     public Vet getCrmVet() {

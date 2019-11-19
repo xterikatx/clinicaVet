@@ -70,7 +70,11 @@
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>5.0.0.Final</version>
         </dependency>
-      
+      <dependency>
+   <groupId>org.nextrtc.signalingserver</groupId>
+   <artifactId>nextrtc-signaling-server</artifactId>
+   <version>0.0.3</version>
+</dependency>
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
