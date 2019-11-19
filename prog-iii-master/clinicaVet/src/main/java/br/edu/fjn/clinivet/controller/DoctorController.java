@@ -36,6 +36,7 @@ public class DoctorController {
 
     }
     
+    
     @Post("new")
 //OBS, enviar o objeto: Doctor doctor nos parametros do metodo
     public void newDoctor() {
