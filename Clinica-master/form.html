@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>Meu Formulário Personalizado</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<style>
+    #area
+    {
+        position:relative;
+        left:37%;
+        top:10em;
+        width:320px;
+        height:270px;
+    }
+    #area #formulario
+    {
+        position:absolute;
+        display:block;   
+    }
+    
+    
+    fieldset
+    {
+        background-color:rgb(235, 235, 235);
+        width:320px;
+        height:380px;
+        border:none;
+        border-radius: 10px;
+    }
+    
+    .login-form
+    {
+        background-color:rgb(235, 235, 235);
+        width:320px;
+        height:380px;
+        border:none;
+        border-radius: 10px;
+    }
+    a
+    {
+        text-align: center;
+        font-weight:bold;
+        font-family: "Segoe UI","Arial","Times New Roman";
+        font-size: 30px;
+        position: relative;
+    }
+    #formulario label
+    {
+        position:absolute;
+        left:19px;
+        margin-right:5px;
+    }
+    #formulario input.campo_nome
+    {
+        background-color:#ffffff;
+        position:absolute;
+        left:18px;
+        top:50px;
+        width:305px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+    }
+    #formulario input.campo_email
+    { 
+        background-color:#ffffff;
+        position:absolute;
+        left:18px;
+        margin-top:20px;
+        width:305px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+    }
+    #formulario textarea.msg
+    {
+        position:absolute;
+        background-color:#ffffff;
+        margin-top: 80px;
+        height: 100px;
+        width: 310px;
+        border-radius: 5px;
+        border:none;
+    }
+    
+    #formulario input.btn_submit
+    {
+        border-style:solid;
+        position:absolute;
+        bottom: 0.5em;
+        margin-left: 32%;
+        height: 30px;
+        width: 100px;
+        color:white;
+        background-color:#0e8d29;
+        border-radius: 8px;
+        
+    }
+
+    .txtb input{
+        border:none;
+        height: 30px;
+        width: 300px;
+        margin-left: 5px;
+    }
+    .logbtn {
+        border-style:solid;
+        /* position:absolute; */
+        /* bottom: 0.5em; */
+        margin-left: 30%;
+        margin-top: 10px;
+        height: 30px;
+        width: 100px;
+        color:white;
+        background-color:#0e8d29;
+        border-radius: 8px;
+
+    }
+    .login-form {
+        margin-left: 10px;
+        height: 430px;
+        padding: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <!-- <div id="area">
+        <form id="formulario" autocomplete="off">
+            <fieldset>
+                <a>Agendar consultas</a>
+                <label>Nome:</label>
+                <input class="campo_nome" type="text"><br><br><br>
+                <label>Celular:</label><input class="campo_email" type="password"><br>
+                <label style="margin-top: 50px;">Mensagem:</label><br><br>
+                <input class="btn_submit" type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </div> -->
+    
+    
+    <form action="#" class="login-form">
+        <h1 style="text-align: center;">Fale com nosco</h1>
+        <div class="txtb">
+            <label>Nome: </label><br><br>
+            <input type="text">
+            <span data-placeholder="Nome"></span>
+        </div>
+        <div class="txtb">
+            <label>Celular: </label><br>
+            <input type="text">
+            <span data-placeholder="Celular"></span>
+        </div>
+        <div class="txtb">
+            <label for="">Hora: </label>
+            <br>
+            <button>7:00</button>
+            <button>7:00</button>
+            <button>7:00</button>
+            <button>7:00</button>
+            <button>7:00</button>
+        </div>
+        <div class="txtb">
+            <label>Mensagem: </label><br>
+            <textarea class="msg" cols="35" rows="8"></textarea>
+        </div>
+        <input type="submit" class="logbtn" value="Enviar">
+    </section>
+</body>
+</html>

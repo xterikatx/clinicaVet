@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="consulta.css">
+  <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="css/consulta.css" media="screen" />
+  
+</head>
+<body>
+  
+  <section class="sec1"></section>
+  
+  <form action="#" class="login-form">
+    <img id="back" type="image" src="image/voltar.png" value="Voltar"  onClick="history.go(-1)" >
+    
+    <h1>Agendar consulta</h1>
+    
+    <div class="txtb">
+      <input type="text">
+      <span data-placeholder="Nome"></span>
+    </div>
+    
+    <div class="txtb">
+      <input type="text">
+      <span data-placeholder="Celular"></span>
+    </div>
+    
+    <div class="txtb">
+      <input type="text">
+      <span data-placeholder="Udfine"></span>
+    </div>
+    
+    <div class="txtb">
+      <input type="password">
+      <span data-placeholder="Mensagem"></span>
+    </div>
+    
+    <input type="submit" class="logbtn" value="Agendar">
+    
+    <div id="loginimg"></div>
+    
+  </form>
+  
+  <script type="text/javascript">
+    $(".txtb input").on("focus",function(){
+      $(this).addClass("focus");
+    });
+    
+    $(".txtb input").on("blur",function(){
+      if($(this).val() == "")
+      $(this).removeClass("focus");
+    });
+    
+  </script>
+  
+</body>
+</html>
