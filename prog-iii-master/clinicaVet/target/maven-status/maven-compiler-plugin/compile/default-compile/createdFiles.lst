@@ -1,5 +1,4 @@
 br/edu/fjn/clinivet/annotations/Private.class
-br/edu/fjn/clinivet/controller/Customer/CustomerController.class
 br/edu/fjn/clinivet/model/employee/Employee.class
 br/edu/fjn/clinivet/view/components/UserSession.class
 br/edu/fjn/clinivet/model/customer/Animal.class
