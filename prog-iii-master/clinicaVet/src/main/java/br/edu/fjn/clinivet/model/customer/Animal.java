@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package br.edu.fjn.clinivet.model.customer;
+import java.io.Serializable;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +16,7 @@ import javax.persistence.PrePersist;
  * @author bruno
  */
 @Entity
-public class Animal {
+public class Animal implements Serializable{
 
     @Column(nullable=false)
     private String name;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Entrar</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" media="screen" />
     <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
 
   </head>

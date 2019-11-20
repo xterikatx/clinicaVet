@@ -48,4 +48,10 @@ public void listById(String cod){
     AnimalRepository.findById(cod);
     //result.redirectTo(this).findAnimal();
 }
+
+@Post("list{id}")
+public void listByName(String name){
+    AnimalRepository.findByName(name);
+    //result.redirectTo(this).findAnimal();
+}
 }

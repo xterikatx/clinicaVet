@@ -16,7 +16,7 @@ import javax.persistence.EntityManager;
  */
 public class CustomerRepository {
 
-    public void save(Customer customer) {
+    public static void save(Customer customer) {
 
         EntityManager manager = ConnectionFactory.getManager();
         try {
@@ -36,7 +36,7 @@ public class CustomerRepository {
         }
     }
 
-    public void update(Customer customer) {
+    public static void update(Customer customer) {
         EntityManager manager = ConnectionFactory.getManager();
         try {
             manager.getTransaction().begin();
@@ -54,26 +54,26 @@ public class CustomerRepository {
             manager.close();
         }
     }
-    public Customer findById(String id){
+    public static Customer findById(String id){
         EntityManager manager = ConnectionFactory.getManager();
         Customer customer = manager.find(Customer.class, id);
         return customer;
     }
 
-    public Customer findByCpf(String cpf){
+    public static Customer findByCpf(String cpf){
         EntityManager manager = ConnectionFactory.getManager();
         Customer customer = manager.find(Customer.class, cpf);
         return customer;        
     }
 
-    public List<Customer> findByName(String name){
+    public static List<Customer> findByName(String name){
         EntityManager manager = ConnectionFactory.getManager();
         List<Customer> customer = manager.createQuery("select c from customer c where c.name= :name ")
                 .setParameter("name", name).getResultList();
         manager.close();
         return customer;  
     }
-    public Customer findPassword(String password){
+    public static Customer findPassword(String password){
         EntityManager manager =ConnectionFactory.getManager();
         Customer customer = manager.find(Customer.class, password);
         return customer;
