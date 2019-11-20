@@ -43,13 +43,13 @@ public void editAnimal(Animal animal){
     //result.redirectTo(this).listAnimal();
 }
 
-@Post("list{id}")
+@Get("list{id}")
 public void listById(String cod){
     AnimalRepository.findById(cod);
     //result.redirectTo(this).findAnimal();
 }
 
-@Post("list{id}")
+@Get("list{name}")
 public void listByName(String name){
     AnimalRepository.findByName(name);
     //result.redirectTo(this).findAnimal();

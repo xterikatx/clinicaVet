@@ -74,7 +74,7 @@ public class CustomerRepository {
         return customer;  
     }
     public static Customer findPassword(String password){
-        EntityManager manager =ConnectionFactory.getManager();
+        EntityManager manager = ConnectionFactory.getManager();
         Customer customer = manager.find(Customer.class, password);
         return customer;
     }
