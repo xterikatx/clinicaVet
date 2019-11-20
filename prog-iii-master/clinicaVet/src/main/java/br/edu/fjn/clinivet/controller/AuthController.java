@@ -10,8 +10,11 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
+import br.edu.fjn.clinivet.model.customer.Customer;
+import br.edu.fjn.clinivet.repository.CustomerRepository;
 import br.edu.fjn.clinivet.view.components.UserSession;
 import javax.inject.Inject;
+import org.hibernate.validator.constraints.br.CPF;
 
 /**
  *
@@ -32,12 +35,15 @@ public class AuthController {
     }
 
     @Post("authenticate")
-    public void signin(String userName, String password) {
-        if (userName.equals("Vinicius") && password.equals("123")) {
-            userSession.setUserName(userName);
-            result.redirectTo(IndexController.class).index();
+    public void signin(String cpf , String password) {
+        if (verify=null) {
+            redi
+        }else{
+        
+            redi
         }
-       }
+      
+    }
  @Get("signout")
     public void signout(){
     userSession.logout();
