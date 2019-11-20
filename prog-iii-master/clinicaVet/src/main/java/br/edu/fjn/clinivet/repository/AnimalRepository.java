@@ -16,7 +16,7 @@ import javax.persistence.EntityManager;
  */
 public class AnimalRepository {
 
-    public void save(Animal animal){
+    public static void save(Animal animal){
         EntityManager manager = ConnectionFactory.getManager();
         try {
          manager.getTransaction();
@@ -36,7 +36,7 @@ public class AnimalRepository {
 
     }
 
-    public void update(Animal animal){
+    public static void update(Animal animal){
         EntityManager manager = ConnectionFactory.getManager();
         try {
           manager.getTransaction();
@@ -54,12 +54,12 @@ public class AnimalRepository {
         }
 
     }
-    public Animal findById(String cod){
+    public static Animal findById(String cod){
         EntityManager manager = ConnectionFactory.getManager();
         Animal animal = manager.find(Animal.class, cod);
         return animal;
     }
-    public List<Animal> findByName(String name){
+    public static List<Animal> findByName(String name){
         EntityManager manager = ConnectionFactory.getManager();
         List<Animal> animals = manager.createQuery("select a from animal a where a.nome=:name")
                 .setParameter("name", name).getResultList();
