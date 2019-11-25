@@ -40,13 +40,14 @@ public class AuthController {
         
         Customer a = CustomerRepository.findByCpfandPassword(cpf,password);
         if (a!=null) {
+            System.out.println("pp" + a);
+           userSession.setCpf(cpf);;
             result.redirectTo(IndexController.class).index();
         }else{
-            System.out.println("Erro No login");
+           
         result.redirectTo(AuthController.class).login();
         
         }        
-        System.out.println("sua página ta aqui"+result);
     }
 
      @Get("signout")
