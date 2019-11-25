@@ -35,7 +35,7 @@ public class Attendence {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Vet crmVet;
     
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Customer idCustomer;
 
     public Integer getId() {

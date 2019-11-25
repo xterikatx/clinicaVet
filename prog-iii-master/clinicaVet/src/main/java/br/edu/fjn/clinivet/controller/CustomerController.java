@@ -23,16 +23,16 @@ public class CustomerController {
     @Inject
 private Result result;
 
-
-@Get("newCustomer")
-public void newCustomer(){
-
+@Get("signup")
+public void signup(){
 }
+
+
 @Post("newCustomer")
 public void newCustomer(Customer customer){
     CustomerRepository.save(customer);
-    //criar jsp listCustomer
-//    result.redirectTo(this).listCustomer();
+    
+      result.redirectTo(AuthController.class).login();
 }
 
 @Post("updateCustomer")

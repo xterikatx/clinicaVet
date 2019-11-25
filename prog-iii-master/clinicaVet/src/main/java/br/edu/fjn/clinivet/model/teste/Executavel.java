@@ -4,29 +4,30 @@
  * and open the template in the editor.
  */
 package br.edu.fjn.clinivet.model.teste;
-import br.edu.fjn.clinivet.controller.CustomerController;
 import br.edu.fjn.clinivet.repository.CustomerRepository;
 import br.edu.fjn.clinivet.model.customer.Customer;
+import static com.mchange.v2.c3p0.impl.C3P0Defaults.password;
 /**
  *
  * @author erika
  */
 public class Executavel {
     public static void main(String[] args) {
-        /*ClinicDAO clinicDao = new ClinicDAO();
-		c.setName("Hamburgueria");
-		c.setSpecialization("Pero");
-		clinicDao.save(c);
-		
-		Doctor d = new Doctor();
-		DoctorDAO doctorDao = new DoctorDAO();
-		d.setName("Dezo Nesto");
-		d.setAge(34);
-		d.setRg("7128673186783");
-		d.setCrm("37862671");
-		doctorDao.save(d);*/
-        
-        CustomerRepository customer = new CustomerRepository();
-    //    customer.setName("");
+        Customer customerrepository = new Customer();
+		/*customerrepository.setName("Vitor");
+		customerrepository.setCpf("46465651236");
+                customerrepository.setAddress("Rua vidal");
+                customerrepository.setPassword("123");
+                customerrepository.setId("1");
+		CustomerRepository.save(customerrepository);
+		*/
+        Customer a = CustomerRepository.findByCpfandPassword("46465651236", "123");
+
+        if (a != null) {
+            System.out.println(a.getCpf()+ " realizou login!");
+        } else {
+            System.out.println("Acesso não autorizado!");
+
+        }
     }
 }

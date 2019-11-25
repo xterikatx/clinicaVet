@@ -15,7 +15,7 @@ import javax.persistence.Persistence;
  */
 public class ConnectionFactory {
      private static final EntityManagerFactory factory
-            = Persistence.createEntityManagerFactory("veterinaria");
+            = Persistence.createEntityManagerFactory("petshop");
 
     public static EntityManager getManager() {
         return factory.createEntityManager();

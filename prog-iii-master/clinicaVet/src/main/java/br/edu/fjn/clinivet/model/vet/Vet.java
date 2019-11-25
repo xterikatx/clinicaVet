@@ -7,6 +7,7 @@ package br.edu.fjn.clinivet.model.vet;
 
 import br.edu.fjn.clinivet.model.customer.Animal;
 import br.edu.fjn.clinivet.model.service.Services;
+import javax.inject.Named;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,18 +30,15 @@ public class Vet {
     @Column(nullable = false)
     private String name;
     
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn
-    private Services services;
+   
        
     @Column(nullable = false)
     private String CPF;
     
     @Column(nullable = false)
     private String password;
- 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Animal idAnimal;
+    
+    
     
     public String getCRM() {
         return CRM;

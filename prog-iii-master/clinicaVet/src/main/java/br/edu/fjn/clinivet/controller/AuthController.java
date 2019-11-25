@@ -12,6 +12,7 @@ import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.edu.fjn.clinivet.model.customer.Customer;
 import br.edu.fjn.clinivet.repository.CustomerRepository;
+
 import br.edu.fjn.clinivet.view.components.UserSession;
 import javax.inject.Inject;
 import org.hibernate.validator.constraints.br.CPF;
@@ -35,22 +36,23 @@ public class AuthController {
     }
 
     @Post("authenticate")
-    public void signin(String cpf , String password) {
-        if (verify=null) {
-            redi
-        }else{
+    public void signin(String cpf, String password) {
         
-            redi
-        }
-      
+        Customer a = CustomerRepository.findByCpfandPassword(cpf,password);
+        if (a!=null) {
+            result.redirectTo(IndexController.class).index();
+        }else{
+            System.out.println("Erro No login");
+        result.redirectTo(AuthController.class).login();
+        
+        }        
+        System.out.println("sua página ta aqui"+result);
     }
- @Get("signout")
-    public void signout(){
-    userSession.logout();
-    result.redirectTo(this).login();
+
+     @Get("signout")
+    public void signout() {
+        userSession.logout();
+        result.redirectTo(this).login();
     }
 
 }
-
-
-
