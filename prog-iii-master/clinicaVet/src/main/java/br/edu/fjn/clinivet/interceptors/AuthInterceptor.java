@@ -13,6 +13,7 @@ import br.com.caelum.vraptor.core.InterceptorStack;
 import br.com.caelum.vraptor.interceptor.Interceptor;
 import br.edu.fjn.clinivet.annotations.Private;
 import br.edu.fjn.clinivet.controller.AuthController;
+import br.edu.fjn.clinivet.controller.IndexController;
 import br.edu.fjn.clinivet.view.components.UserSession;
 import javax.inject.Inject;
 
@@ -32,6 +33,8 @@ public class AuthInterceptor implements Interceptor {
        // Se o Cadastro for logado ,redirecione para a pagina solicitada senão redirecione para o login
         if (userSession.isLogged()) {
             is.next(cm, o);
+            
+            
         }else{
             //redirecionar
             result.redirectTo(AuthController.class).login();

@@ -17,23 +17,29 @@ import javax.inject.Named;
 @Named("userSession")
 public class UserSession implements Serializable {
 
-    private String userName;
+    private String cpf;
     private boolean logged;
 
-    public String getUserName() {
-        return userName;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public boolean isLogged() {
-      return userName !=null;
+        return cpf != null ;
     }
 
+    public void setLogged(boolean logged) {
+        this.logged = logged;
+    }
+
+    
+
     public void logout() {
-        this.userName = null;
+        this.cpf = null;
         this.logged=false;    
     }
 
