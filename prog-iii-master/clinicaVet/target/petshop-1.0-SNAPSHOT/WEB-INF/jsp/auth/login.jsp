@@ -20,7 +20,7 @@
       </div>
       
       <div class="txtb">
-          <input type="text" name="userName">
+          <input type="text" name="cpf">
         <span data-placeholder="Cpf" ></span>
       </div>
       
@@ -31,7 +31,7 @@
       
       <input type="submit"  class="logbtn" value="Entrar">
       
-      <div class="bottom-text">Não tem uma conta ? <a href="sign.html">Sign up</a></div>
+      <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/customer/signup">Sign up</a></div>
       
       <div id="loginimg"></div>
     </form>

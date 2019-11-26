@@ -9,6 +9,8 @@ import br.edu.fjn.clinivet.model.customer.Customer;
 import br.edu.fjn.clinivet.repository.util.ConnectionFactory;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+
 
 /**
  *
@@ -75,7 +77,39 @@ public class CustomerRepository {
     }
     public static Customer findPassword(String password){
         EntityManager manager = ConnectionFactory.getManager();
-        Customer customer = manager.find(Customer.class, password);
+        Customer customer = (Customer) manager.createQuery("select c from customer c where c.password=:password").setParameter("password",password).getSingleResult();
+        manager.close();
         return customer;
     }
+     public static Customer findByCpfandPassword(String cpf, String password) {
+        EntityManager manager= ConnectionFactory.getManager();
+        Customer a = null;
+        try {
+            a = manager.createQuery(
+                    "select a from Customer a where a.cpf = :cpf "
+                    + "AND a.password = :password", Customer.class)
+                    .setParameter("cpf", cpf)
+                    .setParameter("password", password)
+                    .getSingleResult();
+           
+        } catch (NoResultException e) {
+            a = null;
+        }
+        
+        return a;
+        
+    }
+   
+  /* public static boolean validate(String cpf, String password) {
+            CustomerRepository customerrepository =  new CustomerRepository();
+            
+            Customer a =  customerrepository.findByCpf(cpf)
+       
+       
+           
+        
+        return false;
+    }*/
+
+   
 }
