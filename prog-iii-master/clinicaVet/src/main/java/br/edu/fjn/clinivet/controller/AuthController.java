@@ -36,12 +36,7 @@ public class AuthController {
 
     @Post("authenticate")
     public void signin(String cpf , String password) {
-        if (verify=null) {
-            redi
-        }else{
         
-            redi
-        }
       
     }
  @Get("signout")

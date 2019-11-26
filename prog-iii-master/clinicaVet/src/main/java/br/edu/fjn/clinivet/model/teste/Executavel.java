@@ -13,20 +13,6 @@ import br.edu.fjn.clinivet.model.customer.Customer;
  */
 public class Executavel {
     public static void main(String[] args) {
-        /*ClinicDAO clinicDao = new ClinicDAO();
-		c.setName("Hamburgueria");
-		c.setSpecialization("Pero");
-		clinicDao.save(c);
-		
-		Doctor d = new Doctor();
-		DoctorDAO doctorDao = new DoctorDAO();
-		d.setName("Dezo Nesto");
-		d.setAge(34);
-		d.setRg("7128673186783");
-		d.setCrm("37862671");
-		doctorDao.save(d);*/
-        
-        CustomerRepository customer = new CustomerRepository();
-    //    customer.setName("");
+
     }
 }
