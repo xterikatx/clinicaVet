@@ -17,7 +17,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class Customer  {
+public class Customer implements Serializable  {
     
 @Id
 @Column(nullable = false)

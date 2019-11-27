@@ -31,7 +31,7 @@
       
       <input type="submit"  class="logbtn" value="Entrar">
       
-      <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/customer/signup">Sign up</a></div>
+      <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/signup">Sign up</a></div>
       
       <div id="loginimg"></div>
     </form>

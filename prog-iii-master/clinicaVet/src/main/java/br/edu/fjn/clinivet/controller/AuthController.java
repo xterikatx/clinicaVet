@@ -34,6 +34,10 @@ public class AuthController {
     public void login() {
 
     }
+    @Get("signup")
+    public void signup() {
+
+    }
 
     @Post("authenticate")
     public void signin(String cpf, String password) {
