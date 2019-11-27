@@ -15,7 +15,7 @@ import br.edu.fjn.clinivet.repository.CustomerRepository;
 
 import br.edu.fjn.clinivet.view.components.UserSession;
 import javax.inject.Inject;
-import org.hibernate.validator.constraints.br.CPF;
+
 
 /**
  *
@@ -38,16 +38,17 @@ public class AuthController {
     @Post("authenticate")
     public void signin(String cpf, String password) {
         
-        Customer a = CustomerRepository.findByCpfandPassword(cpf,password);
+        Customer a = CustomerRepository.findByCpfandPassword(cpf, password);
         if (a!=null) {
             System.out.println("pp" + a);
-           userSession.setCpf(cpf);;
+            userSession.setCpf(cpf);
             result.redirectTo(IndexController.class).index();
         }else{
            
         result.redirectTo(AuthController.class).login();
         
-        }        
+        }
+System.out.println("pp" + a);        
     }
 
      @Get("signout")

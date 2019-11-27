@@ -1,0 +1,127 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-color:#fafafa;
+}
+form {
+    margin-left: 42%;
+  margin-top: 22%;
+  transform: translate(-50%,-50%);
+}
+
+label {
+    margin-top: -15px;
+    padding: 30px 10px;
+    /* margin-left: 5px; */
+    position: absolute;
+}
+
+input {
+    border-radius: 4px;
+    margin-top: -20px;
+    border:1px solid rgb(223, 223, 223);
+    height: 35px;
+    width:490px;
+    margin-bottom: 10px;
+    margin-left: 75px;
+    color: rgb(22, 22, 22);
+    padding: 3px 10px;
+    font-size:15px;
+}
+
+
+/* 
+.bt {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 510px;
+    border:red;
+    background: rgb(11, 59, 122);
+    cursor: pointer;
+    color:white;
+} */
+
+.bt:hover {
+    background-color:red;
+    /* -webkit-filter: blur(5px);
+    filter: blur(5px); */
+}
+
+.btalt {
+    margin-left: 415px;
+    margin-top: 1px; 
+    position: absolute;
+    font-size: 16px;
+    display: block;
+    width: 90px;
+    height: 33px;
+    border: none;
+    background: linear-gradient(120deg,#3498db,#68dcff,#3498db);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+  }
+  
+  .btalt:hover{
+    background-position: right;
+  }
+
+  .bt {
+    margin-top: 1px;
+    margin-left: 510px;  
+    position: absolute;
+    font-size: 16px;
+    display: block;
+    width: 103px;
+    height: 33px;
+    border: none;
+    background: linear-gradient(120deg,#db3434,#ff5b5b,#d82323);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+  }
+  
+  .bt:hover{
+    background-position: right;
+  }
+
+p {
+    margin: 20px
+}
+
+select.basic {
+    width: 200px;
+    height: 35px;
+}
+select.simple {
+    background: #f5f5f5;
+    border: 0;
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background:#255F9A;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    top: 80%;
+}
+
+footer div {
+    padding: 30px;
+    width: 180px;
+    height: 110px;
+    background-color: rgba(252, 252, 252, 0);
+    margin-left: 100px;
+    color:white;
+    top:10%;
+    line-height: 23px;
+}
