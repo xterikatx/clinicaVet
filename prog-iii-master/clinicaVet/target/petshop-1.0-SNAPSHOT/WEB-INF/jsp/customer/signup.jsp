@@ -19,7 +19,7 @@
   <body>
       <section class="sec2"></section>
 
-      <form action="#" class="login-form">
+  <form action="newCustomer" class="login-form" method="post">
           <img id="back" type="image" src="image/voltar.png" value="Voltar"  onClick="history.go(-1)" >
         <h1>Cadastro</h1>
 
@@ -67,60 +67,6 @@
       </script>
 
 
-<<<<<<< HEAD
-<body>
-  <section class="sec2"></section>
-  
-  <form action="newCustomer" class="login-form" method="post">
-    <img id="back" type="image" src="image/voltar.png" value="Voltar"  onClick="history.go(-1)" >
-    <h1>Cadastro</h1>
-    
-    <div class="txtb">
-      <input type="text">
-      <span data-placeholder="Nome"placeholder="Ex:123-123-123-00"></span>
-    </div>
-    
-    <div class="txtb">
-      <input type="text">
-      <span data-placeholder="Cpf"></span>
-    </div>
-    
-    <div class="txtb">
-      <input type="text">
-      <span data-placeholder="Endereço"></span>
-    </div>
-    
-    <div class="txtb">
-      <input type="number">
-      <span data-placeholder="Celular"></span>
-    </div>
-    
-    <div class="txtb">
-      <input type="password">
-      <span data-placeholder="Senha"></span>
-    </div>
-    
-    <input type="submit" class="logbtn" value="Cadastrar">
-    
-    <div id="loginimg"></div>
-    
-  </form>
-  
-  <script type="text/javascript">
-    $(".txtb input").on("focus",function(){
-      $(this).addClass("focus");
-    });
-    
-    $(".txtb input").on("blur",function(){
-      if($(this).val() == "")
-      $(this).removeClass("focus");
-    });
-    
-  </script>
-  
-  
-</body>
-=======
+
   </body>
->>>>>>> 6029407223d2285ada0a45e634e4b4cf996bb99a
 </html>

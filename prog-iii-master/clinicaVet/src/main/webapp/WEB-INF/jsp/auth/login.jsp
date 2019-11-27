@@ -35,47 +35,12 @@
     
     <input type="submit" href="index.html" class="logbtn" value="Entrar">
     
-    <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/customer/signup">Cadastrar</a></div>
+    <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/signup">Cadastrar</a></div>
     
     <div id="loginimg"></div>
   </form>
   
   <script type="text/javascript">
-    $(".txtb input").on("focus",function(){
-      $(this).addClass("focus");
-    });
-    
-<<<<<<< HEAD
-    <form action="authenticate" class="login-form" method="post">
-      <h1>Bem-vindo</h1>
-      <div class="" id="radiobtn">
-        <input type="radio" name="gender" value="Adm"> Administrador <br>
-        <input type="radio" name="gender" value="cliente" checked> Entrar como cliente
-      </div>
-      
-      <div class="txtb">
-          <input type="text" name="cpf">
-        <span data-placeholder="Cpf" ></span>
-      </div>
-      
-      <div class="txtb">
-          <input type="password" name="password">
-        <span data-placeholder="Senha"></span>
-      </div>
-      
-      <input type="submit"  class="logbtn" value="Entrar">
-      
-      <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/signup">Sign up</a></div>
-      
-      <div id="loginimg"></div>
-    </form>
-    
-    
-
-
-  </body>
-</html>
-=======
     $(".txtb input").on("blur",function(){
       if($(this).val() == "")
       $(this).removeClass("focus");
@@ -86,4 +51,3 @@
   
 </body>
 </html>
->>>>>>> 6029407223d2285ada0a45e634e4b4cf996bb99a
