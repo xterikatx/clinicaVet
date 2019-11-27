@@ -23,7 +23,8 @@ public class CustomerController {
     @Inject
 private Result result;
 
-@Get("signup"){
+@Get("signup")
+public void signup(){
     
 }
 
