@@ -14,13 +14,13 @@ public class Executavel {
     public static void main(String[] args) {
 
         Customer customerrepository = new Customer();
-		/*customerrepository.setName("Vitor");
+		/*customerrepository.setName("Vitor");;
 		customerrepository.setCpf("46465651236");
                 customerrepository.setAddress("Rua vidal");
                 customerrepository.setPassword("123");
                 customerrepository.setId("1");
-		CustomerRepository.save(customerrepository);
-		*/
+		CustomerRepository.save(customerrepository);*/
+		
         Customer a = CustomerRepository.findByCpfandPassword("46465651236", "123");
 
         if (a != null) {
