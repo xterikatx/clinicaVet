@@ -46,13 +46,12 @@ public class AuthController {
         if (a!=null) {
             System.out.println("pp" + a);
             userSession.setCpf(cpf);
-            result.redirectTo(IndexController.class).index();
+            result.redirectTo(PageCustomerController.class).PageCustomer();
         }else{
            
         result.redirectTo(AuthController.class).login();
         
-        }
-System.out.println("pp" + a);        
+        }       
     }
 
      @Get("signout")

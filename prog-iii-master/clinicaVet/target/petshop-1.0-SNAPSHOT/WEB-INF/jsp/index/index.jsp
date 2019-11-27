@@ -32,14 +32,12 @@
         <li><a href="index.html" title="Pagina Inicial">Início</a></li>
         <li><a href="consulta.html">Agendar consultas</a></li>
         <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Serviços</a></li>
+               
         <div class="dropdown">
-          <button class="dropbtn">${userSession.cpf}</button>
+          <button class="dropbtn">ENTRAR</button>
           <div class="dropdown-content">
-            <a href="client.html">Meu Perfil</a>
-            <a href="login.html">Entrar</a>
-            <a href="signin.html">Cadastro</a>
-            <a href="adm.html">Administrador</a>
-            <a href="login.html">Sair</a>
+            <a href="auth/signin">Cliente</a>
+            <a href="adm.html">Administrador</a> 
           </div>
         </div> 
       </ul>

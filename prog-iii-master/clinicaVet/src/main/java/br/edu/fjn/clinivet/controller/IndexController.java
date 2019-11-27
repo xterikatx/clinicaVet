@@ -15,9 +15,10 @@ import br.edu.fjn.clinivet.annotations.Private;
  */
 @Controller
 public class IndexController {
-   @Private
+   
     @Get("/")
     public void index(){
      
     }
 }
+
