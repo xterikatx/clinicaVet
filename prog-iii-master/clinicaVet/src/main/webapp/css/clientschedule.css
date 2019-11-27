@@ -1,0 +1,187 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-color:#fafafa;
+}
+
+label {
+    top:20px;
+    margin-left: 5px;
+    position: relative;
+}
+
+.in {
+    border-radius: 4px; 
+    margin-top: 20px;
+    border:1px solid rgb(223, 223, 223); 
+    height: 35px; 
+    width:360px; 
+    margin-bottom: -6px;
+    margin-left: 5px;
+}
+
+input {
+    border-radius: 4px; 
+    margin-top: 20px;
+    border:1px solid rgb(223, 223, 223); 
+    height: 35px; 
+    width:260px; 
+    margin-bottom: -6px;
+    margin-left: 5px;
+    padding: 0 5px;
+}
+
+.bt {
+    border:red;
+    background: rgb(11, 59, 122);
+    cursor: pointer;
+    position: relative; 
+    margin-left: 700px;
+    margin-top: -80px; 
+    border-radius: 4px;  
+    padding: 5px 10px;
+    color:white;
+    cursor: pointer;
+    position: absolute;
+}
+
+.bt:hover {
+    background-color:red;
+    /* -webkit-filter: blur(5px);
+    filter: blur(5px); */
+}
+
+p {
+    margin: 20px
+}
+
+select.basic {
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+}
+
+select.simple {
+    background: #f5f5f5;
+    border: 0;
+}
+
+footer {
+    width: 100%;
+    height: 35vh;
+    background:#255F9A;
+    bottom: 0; 
+    right: 0;
+    color: white;
+    display: flex;
+    margin-top: 200px;
+}
+
+footer div {
+    padding: 30px;
+    width: 180px;
+    height: 110px;
+    background-color: rgba(252, 252, 252, 0);
+    margin-left: 100px;
+    color:white; 
+    top:10%;
+    line-height: 23px;
+}
+
+.agenda {
+    border-radius: 5px; 
+    border: 1px solid rgb(240, 240, 240);
+    width: 1000px;
+    height:210px;
+    background: rgb(255, 255, 255);
+    margin-top:200px;
+    /* margin-left: 150px; */
+    margin-bottom: 50px;
+    margin-left: 50%;
+    /* border-radius: 30px 30px 0px 0px; */
+    transform: translate(-50%,-50%); 
+}
+
+.icon {
+    height: 50px; 
+    width: 50px; 
+    position: absolute; 
+    margin-left: 780px;
+    margin-top: 5px;
+}
+
+.botao {
+    margin-left: 700px; 
+    margin-top: -130px; 
+    border-radius: 4px; 
+    padding: 5px 10px;
+    background: rgb(11, 59, 122);
+    color:white; 
+    cursor: pointer;
+    position: absolute;
+}
+
+.botao {
+    margin-left: 700px; 
+    margin-top: -130px; 
+    position: absolute;
+    font-size: 16px;
+    display: block;
+    width: 103px;
+    height: 33px;
+    border: none;
+    background: linear-gradient(120deg,#3498db,#79e0ff,#3498db);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.botao:hover{
+    background-position: right;
+}
+
+.bt {
+    margin-left: 700px;
+    margin-top: -80px;  
+    position: absolute;
+    font-size: 16px;
+    display: block;
+    width: 103px;
+    height: 33px;
+    border: none;
+    background: linear-gradient(120deg,#db3434,#ff7070,#db3434);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.bt:hover{
+    background-position: right;
+}
+
+.agt {
+    margin-bottom: 100px;
+    font-weight: bold; 
+    font-size: 19px;
+    margin-left: 15px;
+    position: relative; 
+    top: 20px;
+}
+
+.cell {
+    margin-left: 290px;
+    top: 170px;
+    position: absolute;
+}
+
+.datahora {
+    margin-left: 400px;
+    margin-top: -142px;
+}

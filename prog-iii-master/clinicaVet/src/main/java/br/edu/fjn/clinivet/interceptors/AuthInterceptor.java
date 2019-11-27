@@ -13,7 +13,7 @@ import br.com.caelum.vraptor.core.InterceptorStack;
 import br.com.caelum.vraptor.interceptor.Interceptor;
 import br.edu.fjn.clinivet.annotations.Private;
 import br.edu.fjn.clinivet.controller.AuthController;
-import br.edu.fjn.clinivet.controller.IndexController;
+
 import br.edu.fjn.clinivet.view.components.UserSession;
 import javax.inject.Inject;
 

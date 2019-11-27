@@ -7,7 +7,6 @@
 }
 
 #loginimg {
-  /* background: url(clinica.jpg); */
   position: absolute;
   height: 300px;
   width: 800px;
@@ -18,23 +17,12 @@
 section.sec1 {
   width: 100%;
   height: 100vh;
-  background: url('../image/for.jpg');
-  /* background-image: url(image/for.jpg); */
-  background-size: cover;
-}
-
-section.sec2 {
-  width: 100%;
-  height: 100vh;
-  background: url('../image/.jpg');
-  /* background-image: url(image/for.jpg); */
+  background: url('../img/for.jpg');
   background-size: cover;
 }
 
 body {
   min-height: 100vh;
-  /* background: url(vetr.jpg); */
-  /* background-image: linear-gradient(120deg,#45adf1,#bc50eb); */
 }
 
 .login-form {
@@ -61,7 +49,6 @@ body {
   border-bottom: 2px solid #cecece ;
   position: relative;
   margin: 30px 0;
-  
 }
 
 .txtb input {
@@ -73,7 +60,6 @@ body {
   background: none;
   padding: 0 5px;
   height: 40px;
-  
 }
 
 .txtb span::before {
@@ -97,7 +83,6 @@ body {
   top: 100%;
   left: 0px;
 }
-
 
 .focus + span::before {
   top: -5px;
@@ -132,6 +117,80 @@ body {
 }
 
 #radiobtn {
-  margin-left:5px;
-  margin-top:-40px;
-}  
+  position: absolute;
+  margin-left:200px;
+  margin-top:-150px;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  /* font-size: 22px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: -20px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border: 1px red solid;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border: solid 0.5px rgb(16, 109, 216);
+  margin-left: 13px;
+  /* border-radius: 5px; */
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
