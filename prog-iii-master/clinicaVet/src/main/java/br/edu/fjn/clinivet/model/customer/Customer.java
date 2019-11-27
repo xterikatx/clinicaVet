@@ -10,6 +10,7 @@ import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 
 /**
  *
@@ -17,7 +18,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class Customer  {
+public class Customer implements Serializable  {
     
 @Id
 @Column(nullable = false)
@@ -123,5 +124,10 @@ public String getId() {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+    
+    @PrePersist
+    private void generateId() {
+       this.id= UUID.randomUUID().toString();
     }
 }

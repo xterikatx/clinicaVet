@@ -29,8 +29,7 @@ private Result result;
 @Post("newCustomer")
 public void newCustomer(Customer customer){
     CustomerRepository.save(customer);
-    
-      result.redirectTo(AuthController.class).login();
+    result.redirectTo(AuthController.class).login();
 }
 
 @Post("updateCustomer")

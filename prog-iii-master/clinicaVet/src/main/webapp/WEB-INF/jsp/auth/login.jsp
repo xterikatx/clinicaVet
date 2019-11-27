@@ -35,16 +35,12 @@
     
     <input type="submit" href="index.html" class="logbtn" value="Entrar">
     
-    <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/customer/signup">Cadastrar</a></div>
+    <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/signup">Cadastrar</a></div>
     
     <div id="loginimg"></div>
   </form>
   
   <script type="text/javascript">
-    $(".txtb input").on("focus",function(){
-      $(this).addClass("focus");
-    });
-    
     $(".txtb input").on("blur",function(){
       if($(this).val() == "")
       $(this).removeClass("focus");
