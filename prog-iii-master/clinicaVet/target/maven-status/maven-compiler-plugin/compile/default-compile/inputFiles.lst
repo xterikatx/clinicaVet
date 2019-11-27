@@ -9,6 +9,7 @@
 /home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/DoctorController.java
 /home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/application/CustomerApplication.java
 /home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/repository/util/ConnectionFactory.java
+/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/PageCustomerController.java
 /home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/AnimalController.java
 /home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/AuthController.java
 /home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/interceptors/AuthInterceptor.java
