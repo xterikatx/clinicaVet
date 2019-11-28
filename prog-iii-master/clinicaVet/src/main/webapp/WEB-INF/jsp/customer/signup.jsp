@@ -39,7 +39,7 @@
         </div>
 
         <div class="txtb">
-            <input type="number" name="callphone">
+            <input type="number" name="cellphone">
             <span data-placeholder="Celular"></span>
           </div>
 

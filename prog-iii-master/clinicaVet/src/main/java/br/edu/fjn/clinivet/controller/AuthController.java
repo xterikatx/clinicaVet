@@ -33,7 +33,7 @@ public class AuthController {
     public void login() {
 
     }
- 
+  
     @Post("authenticate")
     public void signin(String cpf, String password) {
 
