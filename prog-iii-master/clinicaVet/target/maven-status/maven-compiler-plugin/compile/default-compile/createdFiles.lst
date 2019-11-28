@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-br/edu/fjn/clinivet/controller/DoctorController.class
-br/edu/fjn/clinivet/controller/EmployeeController.class
-br/edu/fjn/clinivet/model/employee/Employee.class
-br/edu/fjn/clinivet/model/teste/Executavel.class
-br/edu/fjn/clinivet/controller/ServiceController.class
-br/edu/fjn/clinivet/interceptors/AuthInterceptor.class
-br/edu/fjn/clinivet/repository/CustomerRepository.class
-br/edu/fjn/clinivet/controller/CustomerController.class
-br/edu/fjn/clinivet/controller/IndexController.class
-br/edu/fjn/clinivet/repository/util/ConnectionFactory.class
-br/edu/fjn/clinivet/annotations/Public.class
-br/edu/fjn/clinivet/model/attedence/Attendence.class
-br/edu/fjn/clinivet/repository/VetRepository.class
-br/edu/fjn/clinivet/model/customer/Customer.class
-br/edu/fjn/clinivet/annotations/Private.class
-br/edu/fjn/clinivet/repository/EmployeeRepository.class
-br/edu/fjn/clinivet/view/components/UserSession.class
-br/edu/fjn/clinivet/model/customer/Animal.class
-br/edu/fjn/clinivet/application/CustomerApplication.class
-br/edu/fjn/clinivet/controller/AuthController.class
-br/edu/fjn/clinivet/controller/PageCustomerController.class
-br/edu/fjn/clinivet/model/vet/Vet.class
-br/edu/fjn/clinivet/controller/AnimalController.class
-br/edu/fjn/clinivet/repository/AnimalRepository.class
-br/edu/fjn/clinivet/repository/ServiceRepository.class
-br/edu/fjn/clinivet/controller/SignupController.class
-br/edu/fjn/clinivet/model/service/Services.class
-=======
 br\edu\fjn\clinivet\controller\AnimalController.class
 br\edu\fjn\clinivet\repository\AnimalRepository.class
 br\edu\fjn\clinivet\model\vet\Vet.class
@@ -53,4 +24,3 @@ br\edu\fjn\clinivet\annotations\Private.class
 br\edu\fjn\clinivet\application\CustomerApplication.class
 br\edu\fjn\clinivet\model\customer\Animal.class
 br\edu\fjn\clinivet\controller\DoctorController.class
->>>>>>> 634a0b22739ca968cc21bb9702b63c278c3a88bf

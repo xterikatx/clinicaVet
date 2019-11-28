@@ -9,6 +9,8 @@ import java.io.Serializable;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 
@@ -16,20 +18,23 @@ import javax.persistence.PrePersist;
  *
  * @author aluno
  */
-
 @Entity
-public class Customer implements Serializable  {
+public class Customer implements Serializable {
+
+    @Id
+    @Column(nullable = false)
+    private String cpf;
+
+    @Column(nullable = false)
+    private String password;
     
-@Id
-@Column(nullable = false)
-private String cpf;
+    @Column(nullable = false)
+    private String id;
 
-@Column(nullable = false)
-private String password;
-
-@Column(nullable = false)
-private String name;
-private Integer cellphone;
+    @Column(nullable = false)
+    private String name;
+    private Integer cellphone;
+    private String address;
 
     public Integer getCellphone() {
         return cellphone;
@@ -38,69 +43,15 @@ private Integer cellphone;
     public void setCellphone(Integer cellphone) {
         this.cellphone = cellphone;
     }
-private String address;
 
-@Column(nullable = false)
-    private String id;
 
-public String getId() {
+    public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
     }
-
- /* 
-
-    @Column(nullable = false)
-    private String name;
-
-    private String adress;
-    @Column(nullable = false)
-    public String password;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    @Id
-    @Column(nullable = false)
-    private String cpf;
-
-    
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public void gerarId() {
-        this.id = UUID.randomUUID().toString();
-    }
-*/
 
     public String getCpf() {
         return cpf;
@@ -133,9 +84,9 @@ public String getId() {
     public void setAddress(String address) {
         this.address = address;
     }
-    
+
     @PrePersist
     private void generateId() {
-       this.id= UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
     }
 }

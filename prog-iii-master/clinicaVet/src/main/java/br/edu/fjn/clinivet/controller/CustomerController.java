@@ -19,16 +19,17 @@ import javax.inject.Inject;
  * @author erika
  */
 @Controller
+@Path("auth")
 public class CustomerController {
 
     @Inject
     private Result result;
-
- 
-
+    
     @Post("newCustomer")
-    public void newCustomer(Customer customer) {
+    public void newCustomer(Customer customer){
         CustomerRepository.save(customer);
+  
+        System.out.println("CUSTOMER" + customer);
         result.redirectTo(AuthController.class).login();
     }
 
