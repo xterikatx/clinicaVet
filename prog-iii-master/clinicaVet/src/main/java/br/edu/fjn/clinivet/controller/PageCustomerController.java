@@ -19,7 +19,7 @@ public class PageCustomerController {
     
     
     @Get("/Page")
-    public void PageCustomer(){
+    public void pageCustomer(){
      
     }
 }

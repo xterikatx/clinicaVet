@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/repository/ServiceRepository.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/model/attedence/Attendence.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/annotations/Private.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/model/teste/Executavel.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/repository/CustomerRepository.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/model/customer/Customer.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/CustomerController.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/model/customer/Animal.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/DoctorController.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/application/CustomerApplication.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/repository/util/ConnectionFactory.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/PageCustomerController.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/AnimalController.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/AuthController.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/interceptors/AuthInterceptor.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/annotations/Public.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/model/vet/Vet.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/repository/VetRepository.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/controller/IndexController.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/model/employee/Employee.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/view/components/UserSession.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/model/service/Services.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/repository/EmployeeRepository.java
-/home/vinicius/clinicaVet/prog-iii-master/clinicaVet/src/main/java/br/edu/fjn/clinivet/repository/AnimalRepository.java
-=======
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\view\components\UserSession.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\repository\util\ConnectionFactory.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\model\vet\Vet.java
@@ -39,6 +13,7 @@ C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\controller\DoctorController.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\controller\CustomerController.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\controller\IndexController.java
+C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\controller\PageCustomerController.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\repository\CustomerRepository.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\annotations\Public.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\annotations\Private.java
@@ -49,4 +24,3 @@ C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\application\CustomerApplication.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\model\employee\Employee.java
 C:\Users\lopes\Documents\clinicaVet\prog-iii-master\clinicaVet\src\main\java\br\edu\fjn\clinivet\repository\EmployeeRepository.java
->>>>>>> d2cb1f09c25524fded3498b291c4b0c6a7b3a1b1

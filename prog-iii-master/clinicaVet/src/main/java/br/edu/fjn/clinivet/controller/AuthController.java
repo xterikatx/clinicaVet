@@ -16,7 +16,6 @@ import br.edu.fjn.clinivet.repository.CustomerRepository;
 import br.edu.fjn.clinivet.view.components.UserSession;
 import javax.inject.Inject;
 
-
 /**
  *
  * @author vinicius
@@ -34,27 +33,23 @@ public class AuthController {
     public void login() {
 
     }
-    @Get("signup")
-    public void signup() {
-
-    }
-
+ 
     @Post("authenticate")
     public void signin(String cpf, String password) {
-        
+
         Customer a = CustomerRepository.findByCpfandPassword(cpf, password);
-        if (a!=null) {
+        if (a != null) {
             System.out.println("pp" + a);
             userSession.setCpf(cpf);
-            result.redirectTo(PageCustomerController.class).PageCustomer();
-        }else{
-           
-        result.redirectTo(AuthController.class).login();
-        
-        }       
+            result.redirectTo(PageCustomerController.class).pageCustomer();
+        } else {
+
+            result.redirectTo(AuthController.class).login();
+
+        }
     }
 
-     @Get("signout")
+    @Get("signout")
     public void signout() {
         userSession.logout();
         result.redirectTo(this).login();

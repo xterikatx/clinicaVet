@@ -29,7 +29,15 @@ private String password;
 
 @Column(nullable = false)
 private String name;
+private Integer cellphone;
 
+    public Integer getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(Integer cellphone) {
+        this.cellphone = cellphone;
+    }
 private String address;
 
 @Column(nullable = false)
