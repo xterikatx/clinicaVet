@@ -33,9 +33,9 @@
     </div>
     <h5 style="margin-top: -15px; margin-bottom: 15px; font-size: 13px; font-weight: lighter;">Esqueceu a senha ? <a href="#" >Lembrar</a></h5>
     
-    <input type="submit" href="index.html" class="logbtn" value="Entrar">
+    <input type="submit"  class="logbtn" value="Entrar">
     
-    <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/signup">Cadastrar</a></div>
+    <div class="bottom-text">Não tem uma conta ? <a href="${pageContext.request.contextPath}/auth/signup">Cadastrar</a></div>
     
     <div id="loginimg"></div>
   </form>
