@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
@@ -22,14 +23,15 @@ import javax.persistence.PrePersist;
 public class Customer implements Serializable {
 
     @Id
-    @Column(nullable = false)
-    private String cpf;
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
+    private String id;
 
     @Column(nullable = false)
     private String password;
-    
+
     @Column(nullable = false)
-    private String id;
+    private String cpf;
 
     @Column(nullable = false)
     private String name;
@@ -43,7 +45,6 @@ public class Customer implements Serializable {
     public void setCellphone(Integer cellphone) {
         this.cellphone = cellphone;
     }
-
 
     public String getId() {
         return id;

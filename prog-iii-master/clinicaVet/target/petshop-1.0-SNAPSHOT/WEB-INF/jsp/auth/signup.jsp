@@ -24,27 +24,27 @@
         <h1>Cadastro</h1>
 
         <div class="txtb">
-          <input type="text" name="name" id="name">
+          <input type="text" name="customer.name" value="${customer.name}">
           <span data-placeholder="Nome"placeholder="Ex:123-123-123-00"></span>
         </div>
 
         <div class="txtb">
-          <input type="text" name="cpf" id="cpf">
+          <input type="text" name="customer.cpf" value="${customer.cpf}">
           <span data-placeholder="Cpf"></span>
         </div>
 
         <div class="txtb">
-          <input type="text" name="address" id="address">
+          <input type="text" name="customer.address" value="${customer.address}">
           <span data-placeholder="Endereço"></span>
         </div>
 
         <div class="txtb">
-            <input type="number" name="callphone" id="cellphone">
+            <input type="number" name="customer.cellphone" value="${customer.cellphone}">
             <span data-placeholder="Celular"></span>
           </div>
 
         <div class="txtb">
-          <input type="password" name="password" id="password">
+          <input type="password" name="customer.password" value="${customer.password}">
           <span data-placeholder="Senha"></span>
         </div>
 
