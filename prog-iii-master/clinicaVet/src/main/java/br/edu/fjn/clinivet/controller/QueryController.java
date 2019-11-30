@@ -15,24 +15,24 @@ import br.edu.fjn.clinivet.model.query.Query;
 import br.edu.fjn.clinivet.repository.QueryRepository;
 import javax.inject.Inject;
 
-
-
-
 /**
  *
  * @author vinicius
  */
-  @Private
- @Controller
- @Path("auth")
+@Private
+@Controller
+@Path("auth")
 public class QueryController {
-   @Inject
-   private Result result;
-   
+
+    @Inject
+    private Result result;
+
     @Post("newQuery")
-    public void newQuery(Query query){ 
+    public void newQuery(Query query) {
         QueryRepository.save(query);
-        System.out.println("QUERY"+query.getCreatedAt());
+        System.out.println("QUERY" + query.getCreatedAt());
+        result.include("msg", "Consulta agendada com sucesso! Entraremos em contato!");
+
         result.redirectTo(AuthController.class).customerQuery();
     }
 }
