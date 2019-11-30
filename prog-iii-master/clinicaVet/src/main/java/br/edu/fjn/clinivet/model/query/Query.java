@@ -5,15 +5,17 @@
  */
 package br.edu.fjn.clinivet.model.query;
 
-import java.security.Timestamp;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-
+import javax.persistence.PrePersist;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
@@ -21,21 +23,24 @@ import org.hibernate.annotations.GenericGenerator;
  * @author vinicius
  */
 @Entity
-public class Query {
-     @Id
+public class Query implements Serializable {
+
+    @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
-     
+
     @Column(nullable = false)
     private String cpf;
     @Column(nullable = false)
-    private String  name;
+    private String name;
     @Column(nullable = false)
-    private String  phone;
+    private String phone;
     @Column(nullable = false)
-    
-    private Date date;
+
+    @CreationTimestamp
+    @ColumnDefault("CURRENT_TIMESTAMP")
+    protected Date createdAt;
 
     public String getId() {
         return id;
@@ -69,13 +74,17 @@ public class Query {
         this.phone = phone;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
-    
- 
+
+
+    @PrePersist
+    private void generateId() {
+        this.id = UUID.randomUUID().toString();
+    }
 }

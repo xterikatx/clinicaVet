@@ -30,10 +30,9 @@ public class QueryController {
    private Result result;
    
     @Post("newQuery")
-    public void newQuery(Query query){
-        
+    public void newQuery(Query query){ 
         QueryRepository.save(query);
-        System.out.println("QUERY"+query.getDate());
+        System.out.println("QUERY"+query.getCreatedAt());
         result.redirectTo(AuthController.class).customerQuery();
     }
 }
