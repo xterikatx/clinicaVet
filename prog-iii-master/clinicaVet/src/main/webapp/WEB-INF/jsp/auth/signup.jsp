@@ -20,7 +20,7 @@
       <section class="sec2"></section>
 
   <form action="newCustomer" class="login-form" method="post">
-          <img id="back" type="image" src="image/voltar.png" value="Voltar"  onClick="history.go(-1)" >
+          <img id="back" type="image" src="${pageContext.request.contextPath}/image/voltar.png" value="Voltar"  onClick="history.go(-1)" >
         <h1>Cadastro</h1>
 
         <div class="txtb">

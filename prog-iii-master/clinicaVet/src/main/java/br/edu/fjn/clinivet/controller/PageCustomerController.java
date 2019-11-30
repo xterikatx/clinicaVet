@@ -8,6 +8,7 @@ package br.edu.fjn.clinivet.controller;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
+import br.edu.fjn.clinivet.annotations.Private;
 
 
 /**
@@ -15,6 +16,7 @@ import br.com.caelum.vraptor.Get;
  * @author vinicius
  */
 @Controller
+@Private
 public class PageCustomerController {
     
     

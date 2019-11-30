@@ -30,7 +30,7 @@
       </div>
       <ul>
         <li><a href="index.html" title="Pagina Inicial">Início</a></li>
-        <li><a href="consulta.html">Agendar consultas</a></li>
+        <li><a href="auth/signin">Agendar consultas</a></li>
         <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Serviços</a></li>
                
         <div class="dropdown">
