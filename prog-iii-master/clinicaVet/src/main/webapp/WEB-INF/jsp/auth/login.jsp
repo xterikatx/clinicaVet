@@ -10,9 +10,6 @@
 </head>
 <body>
   <section class="sec1">
-    <!-- <a href="index.html" style="cursor: pointer; position: absolute; font-family:sans-serif; padding: 10px; color: rgb(11, 120, 192); font-weight: bold;">
-      Design by Kennedy
-    </a> -->
   </section>
     <form action="authenticate" class="login-form" method="post">
     <img src="icon/logo.png" style="height: 80px; position: absolute; top: -95px; margin-left:110px;">
