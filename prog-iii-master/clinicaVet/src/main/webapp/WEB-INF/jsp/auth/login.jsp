@@ -15,8 +15,9 @@
     </a> -->
   </section>
     <form action="authenticate" class="login-form" method="post">
-    
-    <a style="cursor: pointer; position: relative; font-family:sans-serif; color: rgb(11, 120, 192); font-weight: bold; font-size: 11px; top: -74px; margin-left: 98px;">
+    <img src="icon/logo.png" style="height: 80px; position: absolute; top: -95px; margin-left:110px;">
+
+    <a style="font-family: Courgette; cursor: pointer; position: relative; color: rgb(11, 120, 192); font-weight: bold; font-size: 11px; top: -74px; margin-left: 98px;">
       Designed by Kennedy
     </a>
     
@@ -47,7 +48,6 @@
     });
     
   </script>
-  
-  
+ 
 </body>
 </html>
