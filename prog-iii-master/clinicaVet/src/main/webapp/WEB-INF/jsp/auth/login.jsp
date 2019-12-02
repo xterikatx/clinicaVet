@@ -25,7 +25,7 @@
     
     <div class="txtb">
         <input type="text" name="cpf" minlength="10" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
-      <span data-placeholder="Cpf:" ></span>
+      <span data-placeholder="CPF:" ></span>
     </div>
     
     <div class="txtb">
