@@ -12,6 +12,10 @@
       <section class="sec2"></section>
 
   <form action="newCustomer" class="login-form" method="post">
+        <a href="" style="font-family: Courgette; cursor: pointer; position: absolute; padding: 0px; color: rgb(255, 255, 255); font-weight: bold; font-size: 11px; top: -45px; margin-left: 100px;">
+         Designed by Kennedy
+        </a>
+
           <img id="back" type="image" src="${pageContext.request.contextPath}/image/voltar.png" value="Voltar"  onClick="history.go(-1)" >
         <h1>Cadastro</h1>
 
