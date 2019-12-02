@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html lang="br" dir="ltr">
+<html lang="br">
   <head>
     <meta charset="utf-8">
     <title>Cadastro</title>
+    <link rel="icon" type="img/png" href="${pageContext.request.contextPath}/icon/logo.png" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cadastro.css" media="screen" />
     <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="js/masc.js" charset="utf-8"></script>
   </head>
-  <style>
-  #back{
-    margin-left:-5px;
-    margin-top:-50px;
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-  }
-  </style>
   <body>
       <section class="sec2"></section>
 
@@ -25,27 +17,27 @@
 
         <div class="txtb">
           <input type="text" name="customer.name" value="${customer.name}">
-          <span data-placeholder="Nome"placeholder="Ex:123-123-123-00"></span>
+          <span data-placeholder="Nome:"></span>
         </div>
 
         <div class="txtb">
-          <input type="text" name="customer.cpf" value="${customer.cpf}">
-          <span data-placeholder="Cpf"></span>
+          <input type="text" name="customer.cpf" value="${customer.cpf}" placeholder="Ex:123-123-123-00" minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+          <span data-placeholder="CPF:"></span>
         </div>
 
         <div class="txtb">
           <input type="text" name="customer.address" value="${customer.address}">
-          <span data-placeholder="Endereço"></span>
+          <span data-placeholder="Endereço:"></span>
         </div>
 
         <div class="txtb">
-            <input type="number" name="customer.cellphone" value="${customer.cellphone}">
-            <span data-placeholder="Celular"></span>
+            <input type="number" name="customer.cellphone" value="${customer.cellphone}" minlength="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)">
+            <span data-placeholder="Celular:"></span>
           </div>
 
         <div class="txtb">
-          <input type="password" name="customer.password" value="${customer.password}">
-          <span data-placeholder="Senha"></span>
+          <input type="password" name="customer.password" value="${customer.password}" minlength="8">
+          <span data-placeholder="Senha:"></span>
         </div>
 
         <input type="submit" class="logbtn" value="Cadastrar">
@@ -65,8 +57,6 @@
       });
 
       </script>
-
-
 
   </body>
 </html>
