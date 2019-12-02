@@ -26,11 +26,8 @@ public class CustomerController {
     private Result result;
     
     @Post("newCustomer")
-    public void newCustomer(Customer customer){
-        
+    public void newCustomer(Customer customer){        
         CustomerRepository.save(customer);
-  
-        System.out.println("CUSTOMER " + customer.getName());
         result.redirectTo(AuthController.class).login();
     }
 

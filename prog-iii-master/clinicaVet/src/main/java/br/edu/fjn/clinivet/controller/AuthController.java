@@ -40,7 +40,7 @@ public class AuthController {
     
     @Get("query")
     public void customerQuery(){
-    };
+    }
   
     @Post("authenticate")
     public void signin(String cpf, String password) {

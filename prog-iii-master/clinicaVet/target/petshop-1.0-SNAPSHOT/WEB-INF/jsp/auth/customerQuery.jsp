@@ -37,7 +37,7 @@
                 <span data-placeholder="Celular"></span>
             </div>
             <div class="txtb">
-                <input type="text"  name="query.cpf"  value="${query.cpf}">
+                <input type="text"  name="query.cpf"  value="${query.cpf}"p>
                 <span data-placeholder="CPF"></span>
             </div>
 
