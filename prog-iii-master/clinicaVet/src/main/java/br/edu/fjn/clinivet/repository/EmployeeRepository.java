@@ -5,6 +5,7 @@
  */
 package br.edu.fjn.clinivet.repository;
 
+import br.edu.fjn.clinivet.model.customer.Customer;
 import br.edu.fjn.clinivet.model.employee.Employee;
 import br.edu.fjn.clinivet.repository.util.ConnectionFactory;
 import java.util.List;
