@@ -99,6 +99,12 @@ public class CustomerRepository {
         return a;
         
     }
+     public static int DeletebyId(String Id){
+         EntityManager manager = ConnectionFactory.getManager();
+         findById(Id);
+         int customer = manager.createQuery("delete c from customer c where c.id=id").setParameter("id", Id).executeUpdate();
+         return customer;
+     }
    
   /* public static boolean validate(String cpf, String password) {
             CustomerRepository customerrepository =  new CustomerRepository();
