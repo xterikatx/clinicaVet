@@ -73,4 +73,22 @@ public class VetRepository {
         manager.close();
         return vet;
     }
+         public void DeletebyId(String Id){
+         EntityManager manager = ConnectionFactory.getManager();
+         manager.getTransaction().begin();
+         Vet vet = findById(Id);
+         
+         try {
+             manager.remove(manager.getReference(Vet.class,vet.getCRM()));
+             manager.getTransaction().commit();
+             
+             
+         } catch (Exception e) {
+             if (manager.getTransaction().isActive()){
+                 manager.getTransaction().rollback();
+             }
+         }finally{
+             manager.close();
+        }
+     }
 }

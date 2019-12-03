@@ -65,5 +65,22 @@ public class AnimalRepository {
                 .setParameter("name", name).getResultList();
         return animals;
     } 
-
+     public void DeletebyCod(String cod){
+         EntityManager manager = ConnectionFactory.getManager();
+         manager.getTransaction().begin();
+         Animal animal = findById(cod);
+         
+         try {
+             manager.remove(manager.getReference(Animal.class,animal.getCod()));
+             manager.getTransaction().commit();
+             
+             
+         } catch (Exception e) {
+             if (manager.getTransaction().isActive()){
+                 manager.getTransaction().rollback();
+             }
+         }finally{
+             manager.close();
+        }
+     }
 }

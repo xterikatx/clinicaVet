@@ -68,13 +68,12 @@ public class CustomerRepository {
         return customer;        
     }
 
-    public static List<Customer> findByName(String name){
+   /* public static List<Customer> findByName(String name){
         EntityManager manager = ConnectionFactory.getManager();
-        List<Customer> customer = manager.createQuery("select c from customer c where c.name= :name ")
+        List<Customer> customer = manager.createQuery("select c from customer c where c.name=:name ")
                 .setParameter("name", name).getResultList();
-        manager.close();
         return customer;  
-    }
+    }*/
     public static Customer findPassword(String password){
         EntityManager manager = ConnectionFactory.getManager();
         Customer customer = (Customer) manager.createQuery("select c from customer c where c.password=:password").setParameter("password",password).getSingleResult();
@@ -99,11 +98,23 @@ public class CustomerRepository {
         return a;
         
     }
-     public static int DeletebyId(String Id){
+     public static void DeletebyId(String Id){
          EntityManager manager = ConnectionFactory.getManager();
-         findById(Id);
-         int customer = manager.createQuery("delete c from customer c where c.id=id").setParameter("id", Id).executeUpdate();
-         return customer;
+         manager.getTransaction().begin();
+         Customer customer = findById(Id);
+         
+         try {
+             manager.remove(manager.getReference(Customer.class,customer.getId()));
+             manager.getTransaction().commit();
+             
+             
+         } catch (Exception e) {
+             if (manager.getTransaction().isActive()){
+                 manager.getTransaction().rollback();
+             }
+         }finally{
+             manager.close();
+        }
      }
    
   /* public static boolean validate(String cpf, String password) {

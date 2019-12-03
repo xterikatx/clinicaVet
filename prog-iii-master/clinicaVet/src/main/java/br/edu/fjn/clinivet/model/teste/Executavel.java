@@ -13,13 +13,17 @@ import br.edu.fjn.clinivet.model.customer.Customer;
 public class Executavel {
     public static void main(String[] args) {
 
-        Customer customerrepository = new Customer();
-		/*customerrepository.setName("Vitor");;
+        Customer customer = new Customer();
+        CustomerRepository.findById("ff8081816ec715b3016ec715b58a0000");
+        System.out.println("cliente:"+CustomerRepository.findByName("Vinicius"));
+       /* CustomerRepository.DeletebyId("1");
+        System.out.println("Usuario deletado:"+customer.getId());
+		customerrepository.setName("Vitor");;
 		customerrepository.setCpf("46465651236");
                 customerrepository.setAddress("Rua vidal");
                 customerrepository.setPassword("123");
                 customerrepository.setId("1");
-		CustomerRepository.save(customerrepository);*/
+		CustomerRepository.save(customerrepository);
 		
         Customer a = CustomerRepository.findByCpfandPassword("46465651236", "123");
 
@@ -28,6 +32,7 @@ public class Executavel {
         } else {
             System.out.println("Acesso não autorizado!");
 
-        }
+        }*/
+                
     }
 }
