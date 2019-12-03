@@ -17,16 +17,12 @@ import br.edu.fjn.clinivet.annotations.Private;
  */
 @Controller
 @Private
-public class PageCustomerController {
+public class PageAdmController {
     
     
-    @Get("/Page")
-    public void pageCustomer(){
+    @Get("page")
+    public void pageAdm(){
      
     }
-    
-    @Get("/pageAdm")
-    public void pageAdm(){
-    
-    }
+
 }

@@ -11,7 +11,7 @@
   <body>
       <section class="sec2"></section>
 
-  <form action="newCustomer" class="login-form" method="post">
+  <form action="newEmployee" class="login-form" method="post">
         <a href="" style="font-family: Courgette; cursor: pointer; position: absolute; padding: 0px; color: rgb(255, 255, 255); font-weight: bold; font-size: 11px; top: -45px; margin-left: 100px;">
          Designed by Kennedy
         </a>
@@ -20,27 +20,22 @@
         <h1>Cadastro</h1>
 
         <div class="txtb">
-          <input type="text" name="customer.name" value="${customer.name}">
+          <input type="text" name="employee.name" value="${employee.name}">
           <span data-placeholder="Nome:"></span>
         </div>
 
         <div class="txtb">
-          <input type="text" name="customer.cpf" value="${customer.cpf}"minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+          <input type="text" name="employee.cpf" value="${employee.cpf}"minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
           <span data-placeholder="CPF:"></span>
         </div>
 
         <div class="txtb">
-          <input type="text" name="customer.address" value="${customer.address}">
-          <span data-placeholder="Endereço:"></span>
-        </div>
-
-        <div class="txtb">
-            <input type="text" name="customer.cellphone" value="${customer.cellphone}" minlength="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)">
+            <input type="text" name="employee.cellphone" value="${employee.cellphone}" minlength="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)">
             <span data-placeholder="Celular:"></span>
           </div>
 
         <div class="txtb">
-          <input type="password" name="customer.password" value="${customer.password}" minlength="8">
+          <input type="password" name="employee.password" value="${employee.password}" minlength="8">
           <span data-placeholder="Senha:"></span>
         </div>
 

@@ -18,11 +18,11 @@ public class Executavel {
         Customer customer = new Customer();
         System.out.println(""+CustomerRepository.CustomerList());
         
-        Employee employee = new Employee();
+       /* Employee employee = new Employee();
         employee.setCpf(984234234);
         employee.setName("vinicius");
         employee.setPassword(123);
-        EmployeeRepository.save(employee);
+        EmployeeRepository.save(employee);*/
         
 
         //System.out.println("cliente:"+CustomerRepository.findByName("Vinicius"));

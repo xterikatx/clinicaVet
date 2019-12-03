@@ -21,7 +21,7 @@
     <h1>Login</h1>
     
     <div class="txtb">
-        <input type="text" name="cpf" minlength="10" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
+        <input type="text" name="cpf" minlength="10" maxlength="14" >
       <span data-placeholder="CPF:" ></span>
     </div>
     

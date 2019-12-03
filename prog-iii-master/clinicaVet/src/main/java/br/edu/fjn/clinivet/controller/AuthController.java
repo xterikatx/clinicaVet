@@ -47,27 +47,27 @@ public class AuthController {
     @Post("authenticate")
     public void signin(String cpf, String password) {
 
-        Customer a = CustomerRepository.findByCpfandPassword(cpf, password);
+        Employee a = EmployeeRepository.findByCpfandPassword(cpf, password);
         
         if (a != null) {
             System.out.println("pp" + a);
             userSession.setCpf(cpf);
-            result.redirectTo(PageCustomerController.class).pageCustomer();
+            result.redirectTo(PageAdmController.class).pageAdm();
         } else {
             result.redirectTo(AuthController.class).login();
 
         }
         
-        Employee b = EmployeeRepository.findByCpfandPassword(cpf, password);
+     /*   Employee b = EmployeeRepository.findByCpfandPassword(cpf, password);
 
         if (b != null) {
             userSession.setCpf(cpf);
-            result.redirectTo(PageAdmController.class).pageAdm();
+         //   result.redirectTo(PageAdmController.class).pageAdm();
         } else {
 
             result.redirectTo(AuthController.class).login();
 
-        }
+        }*/
     }
 
     @Get("signout")
