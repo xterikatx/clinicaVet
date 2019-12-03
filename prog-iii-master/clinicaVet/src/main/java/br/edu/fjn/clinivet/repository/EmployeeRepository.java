@@ -10,6 +10,7 @@ import br.edu.fjn.clinivet.model.employee.Employee;
 import br.edu.fjn.clinivet.repository.util.ConnectionFactory;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 
 /**
  *
@@ -74,4 +75,21 @@ public class EmployeeRepository {
         manager.close();
         return employee;
     }
+     public static Employee findByCpfandPassword(String cpf, String password) {
+        EntityManager manager= ConnectionFactory.getManager();
+        Employee a = null;
+        try {
+            a = manager.createQuery(
+                    "select a from Employee a where a.cpf = :cpf "
+                    + "AND a.password = :password", Employee.class)
+                    .setParameter("cpf", cpf)
+                    .setParameter("password", password)
+                    .getSingleResult();
+           
+        } catch (NoResultException e) {
+            a = null;
+        }
+        
+        return a;
+     }
 }

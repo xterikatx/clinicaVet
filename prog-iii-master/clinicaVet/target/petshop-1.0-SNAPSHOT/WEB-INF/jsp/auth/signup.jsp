@@ -5,8 +5,13 @@
     <title>Cadastro</title>
     <link rel="icon" type="img/png" href="${pageContext.request.contextPath}/icon/logo.png" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cadastro.css" media="screen" />
+<<<<<<< HEAD
     <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js" charset="utf-8"></script>
     <script src="${pageContext.request.contextPath}/js/masc.js" charset="utf-8"></script>
+=======
+    <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="js/masc.js" charset="utf-8"></script>
+>>>>>>> 00f9e21918605032133e14ba3587e00d00e1ca13
   </head>
   <body>
       <section class="sec2"></section>
@@ -16,7 +21,11 @@
          Designed by Kennedy
         </a>
 
+<<<<<<< HEAD
           <img id="back" type="image" src="${pageContext.request.contextPath}/icon/back.png" value="Voltar"  onClick="history.go(-1)" >
+=======
+          <img id="back" type="image" src="${pageContext.request.contextPath}/image/voltar.png" value="Voltar"  onClick="history.go(-1)" >
+>>>>>>> 00f9e21918605032133e14ba3587e00d00e1ca13
         <h1>Cadastro</h1>
 
         <div class="txtb">
@@ -25,7 +34,11 @@
         </div>
 
         <div class="txtb">
+<<<<<<< HEAD
           <input type="text" name="customer.cpf" value="${customer.cpf}"minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+=======
+          <input type="text" name="customer.cpf" value="${customer.cpf}" placeholder="Ex:123-123-123-00" minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+>>>>>>> 00f9e21918605032133e14ba3587e00d00e1ca13
           <span data-placeholder="CPF:"></span>
         </div>
 
@@ -35,7 +48,11 @@
         </div>
 
         <div class="txtb">
+<<<<<<< HEAD
             <input type="text" name="customer.cellphone" value="${customer.cellphone}" minlength="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)">
+=======
+            <input type="number" name="customer.cellphone" value="${customer.cellphone}" minlength="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)">
+>>>>>>> 00f9e21918605032133e14ba3587e00d00e1ca13
             <span data-placeholder="Celular:"></span>
           </div>
 

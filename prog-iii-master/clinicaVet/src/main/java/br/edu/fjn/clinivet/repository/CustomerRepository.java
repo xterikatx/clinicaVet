@@ -11,6 +11,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+
 
 /**
  *
@@ -67,12 +70,21 @@ public class CustomerRepository {
         Customer customer = manager.find(Customer.class, cpf);
         return customer;        
     }
+        public static List<Customer> CustomerList(){
+        EntityManager manager = ConnectionFactory.getManager();
+        Session session = (Session) manager.getDelegate();
+        Criteria criteria = session.createCriteria(Customer.class);
+        List<Customer> customer = criteria.
+                setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
+                .list();
+        manager.close();
+        return customer;  
+    }
 
     public static List<Customer> findByName(String name){
         EntityManager manager = ConnectionFactory.getManager();
-        List<Customer> customer = manager.createQuery("select c from customer c where c.name= :name ")
+        List<Customer> customer = manager.createQuery("select c from customer c where c.name=:name ")
                 .setParameter("name", name).getResultList();
-        manager.close();
         return customer;  
     }
     public static Customer findPassword(String password){
@@ -99,11 +111,23 @@ public class CustomerRepository {
         return a;
         
     }
-     public static int DeletebyId(String Id){
+     public static void DeletebyId(String Id){
          EntityManager manager = ConnectionFactory.getManager();
-         findById(Id);
-         int customer = manager.createQuery("delete c from customer c where c.id=id").setParameter("id", Id).executeUpdate();
-         return customer;
+         manager.getTransaction().begin();
+         Customer customer = findById(Id);
+         
+         try {
+             manager.remove(manager.getReference(Customer.class,customer.getId()));
+             manager.getTransaction().commit();
+             
+             
+         } catch (Exception e) {
+             if (manager.getTransaction().isActive()){
+                 manager.getTransaction().rollback();
+             }
+         }finally{
+             manager.close();
+        }
      }
    
   /* public static boolean validate(String cpf, String password) {

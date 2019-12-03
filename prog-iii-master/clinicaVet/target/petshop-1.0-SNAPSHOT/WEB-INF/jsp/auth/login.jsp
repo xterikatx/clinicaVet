@@ -12,7 +12,11 @@
   <section class="sec1">
   </section>
     <form action="authenticate" class="login-form" method="post">
+<<<<<<< HEAD
     <img src="${pageContext.request.contextPath}/icon/logo.png" style="height: 80px; position: absolute; top: -95px; margin-left:110px;">
+=======
+    <img src="icon/logo.png" style="height: 80px; position: absolute; top: -95px; margin-left:110px;">
+>>>>>>> 00f9e21918605032133e14ba3587e00d00e1ca13
 
     <a style="font-family: Courgette; cursor: pointer; position: relative; color: rgb(11, 120, 192); font-weight: bold; font-size: 11px; top: -74px; margin-left: 98px;">
       Designed by Kennedy

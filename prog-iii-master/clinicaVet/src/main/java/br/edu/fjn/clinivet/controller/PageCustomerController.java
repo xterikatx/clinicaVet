@@ -24,4 +24,9 @@ public class PageCustomerController {
     public void pageCustomer(){
      
     }
+    
+    @Get("/pageAdm")
+    public void pageAdm(){
+    
+    }
 }

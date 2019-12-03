@@ -43,15 +43,5 @@ public class CustomerController {
         //result.redirectTo(this).findCustomer();
     }
 
-    @Get("list{name}")
-    public void listByName(String name) {
-        CustomerRepository.findByName(name);
-        //result.redirectTo(this).findCustomer();
-    }
-
-    @Get("list{cpf}")
-    public void listByCpf(String cpf) {
-        CustomerRepository.findByCpf(cpf);
-        //result.redirectTo(this).findCustomer();
-    }
+    
 }

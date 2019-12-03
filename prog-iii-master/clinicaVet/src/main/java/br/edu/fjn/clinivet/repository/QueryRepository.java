@@ -67,4 +67,22 @@ public class QueryRepository {
         return query;
     } 
 
+     public void DeletebyId(String Id){
+         EntityManager manager = ConnectionFactory.getManager();
+         manager.getTransaction().begin();
+         Query query = findById(Id);
+         
+         try {
+             manager.remove(manager.getReference(Query.class,query.getId()));
+             manager.getTransaction().commit();
+             
+             
+         } catch (Exception e) {
+             if (manager.getTransaction().isActive()){
+                 manager.getTransaction().rollback();
+             }
+         }finally{
+             manager.close();
+        }
+     }
 }

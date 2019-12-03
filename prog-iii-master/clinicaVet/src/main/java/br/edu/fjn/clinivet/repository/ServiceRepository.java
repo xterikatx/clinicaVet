@@ -5,11 +5,12 @@
  */
 package br.edu.fjn.clinivet.repository;
 
-import br.edu.fjn.clinivet.model.employee.Employee;
+import br.edu.fjn.clinivet.model.customer.Customer;
 import br.edu.fjn.clinivet.model.service.Services;
 import br.edu.fjn.clinivet.repository.util.ConnectionFactory;
 import java.util.List;
 import javax.persistence.EntityManager;
+import org.hibernate.service.Service;
 
 /**
  *
@@ -66,5 +67,23 @@ public class ServiceRepository {
         manager.close();
         return service;
    }
+         public void DeletebyId(String Id){
+         EntityManager manager = ConnectionFactory.getManager();
+         manager.getTransaction().begin();
+         Services services = findById(Id);
+         
+         try {
+             manager.remove(manager.getReference(Services.class,services.getId()));
+             manager.getTransaction().commit();
+             
+             
+         } catch (Exception e) {
+             if (manager.getTransaction().isActive()){
+                 manager.getTransaction().rollback();
+             }
+         }finally{
+             manager.close();
+        }
+     }
 
 }
