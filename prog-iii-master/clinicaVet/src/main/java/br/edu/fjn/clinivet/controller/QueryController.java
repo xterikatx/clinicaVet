@@ -16,6 +16,7 @@ import br.edu.fjn.clinivet.annotations.Private;
 import br.edu.fjn.clinivet.model.query.Query;
 import br.edu.fjn.clinivet.repository.EmployeeRepository;
 import br.edu.fjn.clinivet.repository.QueryRepository;
+import java.util.List;
 import javax.inject.Inject;
 
 /**
@@ -41,13 +42,10 @@ public class QueryController {
 
     @Get("listQuery")
     public void query() {
-
-    }
-
-    @Get("list")
-    public void listById(String id) {
-        EmployeeRepository.findById(id);
-        result.redirectTo(this).query();
+        QueryRepository queryrepository = new QueryRepository();
+        QueryRepository.listAll();
+        System.out.println("AQUIII" + QueryRepository.listAll());
+        result.include("querys");
     }
 
 }
