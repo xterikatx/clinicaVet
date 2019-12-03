@@ -13,6 +13,7 @@ body {
 }
 
 #back {
+    z-index: 1;
   margin-left:-5px;
   margin-top:-50px;
   position: absolute;
@@ -38,7 +39,7 @@ section.sec1 {
 .login-form {
   width: 380px;
   background: #fafafa;
-  height: 550px;
+  height: 500px;
   padding: 80px 40px;
   border-radius: 10px;
   position: absolute;
@@ -117,6 +118,7 @@ section.sec1 {
   cursor: pointer;
   transition: .5s;
   border-radius: 25px;
+  margin-top:50px;
 }
 
 .logbtn:hover{

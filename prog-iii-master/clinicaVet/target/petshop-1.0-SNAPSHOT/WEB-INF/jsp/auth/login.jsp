@@ -5,18 +5,16 @@
   <title>Entrar</title>
   <link rel="icon" type="img/png" href="${pageContext.request.contextPath}/icon/logo.png" />
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css" media="screen" />
-  <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
-  <script src="js/masc.js" charset="utf-8"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="${pageContext.request.contextPath}/js/masc.js" charset="utf-8"></script>
 </head>
 <body>
   <section class="sec1">
-    <!-- <a href="index.html" style="cursor: pointer; position: absolute; font-family:sans-serif; padding: 10px; color: rgb(11, 120, 192); font-weight: bold;">
-      Design by Kennedy
-    </a> -->
   </section>
     <form action="authenticate" class="login-form" method="post">
-    
-    <a style="cursor: pointer; position: relative; font-family:sans-serif; color: rgb(11, 120, 192); font-weight: bold; font-size: 11px; top: -74px; margin-left: 98px;">
+    <img src="${pageContext.request.contextPath}/icon/logo.png" style="height: 80px; position: absolute; top: -95px; margin-left:110px;">
+
+    <a style="font-family: Courgette; cursor: pointer; position: relative; color: rgb(11, 120, 192); font-weight: bold; font-size: 11px; top: -74px; margin-left: 98px;">
       Designed by Kennedy
     </a>
     
@@ -24,7 +22,7 @@
     
     <div class="txtb">
         <input type="text" name="cpf" minlength="10" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" >
-      <span data-placeholder="Cpf:" ></span>
+      <span data-placeholder="CPF:" ></span>
     </div>
     
     <div class="txtb">
@@ -47,7 +45,6 @@
     });
     
   </script>
-  
-  
+ 
 </body>
 </html>

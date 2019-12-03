@@ -24,9 +24,9 @@ public class CustomerController {
 
     @Inject
     private Result result;
-    
+
     @Post("newCustomer")
-    public void newCustomer(Customer customer){        
+    public void newCustomer(Customer customer) {
         CustomerRepository.save(customer);
         result.redirectTo(AuthController.class).login();
     }

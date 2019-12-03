@@ -5,14 +5,14 @@
   <title>Entrar</title>
   <link rel="icon" type="img/png" href="${pageContext.request.contextPath}/icon/logo.png" />
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css" media="screen" />
-  <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
-  <script src="js/masc.js" charset="utf-8"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="${pageContext.request.contextPath}/js/masc.js" charset="utf-8"></script>
 </head>
 <body>
   <section class="sec1">
   </section>
     <form action="authenticate" class="login-form" method="post">
-    <img src="icon/logo.png" style="height: 80px; position: absolute; top: -95px; margin-left:110px;">
+    <img src="${pageContext.request.contextPath}/icon/logo.png" style="height: 80px; position: absolute; top: -95px; margin-left:110px;">
 
     <a style="font-family: Courgette; cursor: pointer; position: relative; color: rgb(11, 120, 192); font-weight: bold; font-size: 11px; top: -74px; margin-left: 98px;">
       Designed by Kennedy

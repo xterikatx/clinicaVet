@@ -6,22 +6,23 @@
   box-sizing: border-box;
 }
 
-
+@font-face {
+  font-family: Courgette;
+  src: url('../font/Courgette-Regular.ttf');
+}
 
 section.sec2 {
   width: 100%;
   height: 100vh;
-  background: url('../image/what2.jpg');
- 
+  background: url('../img/what2.jpg');
   background-size: cover;
 }
 
-body{
-  min-height: 100vh;
-  
+body {
+  min-height: 100vh;  
 }
 
-.login-form{
+.login-form {
   width: 380px;
   background: #fafafa;
   height: 550px;
@@ -36,19 +37,18 @@ body{
   box-shadow: 0px 3px 15px 3px rgba(173, 173, 173, 0.75);
 }
 
-.login-form h1{
+.login-form h1 {
   text-align: center;
   margin-bottom: 10px;  
 }
 
-.txtb{
+.txtb {
   border-bottom: 2px solid #cecece ;
   position: relative;
   margin: 25px 0;
-  
 }
 
-.txtb input{
+.txtb input {
   font-size: 15px;
   color: #333;
   border: none;
@@ -60,7 +60,7 @@ body{
   
 }
 
-.txtb span::before{
+.txtb span::before {
   content: attr(data-placeholder);
   position: absolute;
   top: 10%;
@@ -71,7 +71,7 @@ body{
   transition: .5s;
 }
 
-.txtb span::after{
+.txtb span::after {
   content: '';
   position: absolute;
   width: 0%;
@@ -82,15 +82,15 @@ body{
   left: 0px;
 }
 
-
-.focus + span::before{
+.focus + span::before {
   top: -5px;
 }
-.focus + span::after{
+
+.focus + span::after {
   width: 100%;
 }
 
-.logbtn{
+.logbtn {
   font-size: 20px;
   display: block;
   width: 100%;
@@ -105,17 +105,26 @@ body{
   border-radius: 25px;
 }
 
-.logbtn:hover{
+.logbtn:hover {
   background-position: right;
 }
 
-.bottom-text{
+.bottom-text {
   margin-top: 120px;
   text-align: center;
   font-size: 13px;
 }
 
-#radiobtn{
+#radiobtn {
   margin-left:5px;
   margin-top:-40px;
-  }
+}
+
+#back {
+  margin-left:-5px;
+  margin-top:-50px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}

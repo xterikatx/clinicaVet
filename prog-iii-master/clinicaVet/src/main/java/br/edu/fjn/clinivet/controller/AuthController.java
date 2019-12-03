@@ -51,7 +51,6 @@ public class AuthController {
             userSession.setCpf(cpf);
             result.redirectTo(PageCustomerController.class).pageCustomer();
         } else {
-
             result.redirectTo(AuthController.class).login();
 
         }

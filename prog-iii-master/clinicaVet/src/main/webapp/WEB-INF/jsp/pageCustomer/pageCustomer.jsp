@@ -8,7 +8,7 @@
   <link rel="icon" type="img/png" href="icon/logo.png" />
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/index.css" media="screen"/>
   <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/css/navbar.css" media="screen" />
-  <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js" charset="utf-8"></script>
   <script type="text/javascript">
     $(window).on('scroll', function(){
       if ($(window).scrollTop()) {
@@ -29,7 +29,7 @@
         <a href="index.html" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
       </div>
       <ul>
-        <li><a href="index.html" title="Pagina Inicial">Início</a></li>
+        <li><a href="auth/pageCustomer.jsp" title="Pagina Inicial">Início</a></li>
         <li><a href="${pageContext.request.contextPath}/auth/query">Agendar consultas</a></li>
         <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Serviços</a></li>
         <div class="dropdown">

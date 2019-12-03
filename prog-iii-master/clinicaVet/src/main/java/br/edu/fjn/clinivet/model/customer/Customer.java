@@ -35,14 +35,14 @@ public class Customer implements Serializable {
 
     @Column(nullable = false)
     private String name;
-    private Integer cellphone;
+    private String cellphone;
     private String address;
 
-    public Integer getCellphone() {
+    public String getCellphone() {
         return cellphone;
     }
 
-    public void setCellphone(Integer cellphone) {
+    public void setCellphone(String cellphone) {
         this.cellphone = cellphone;
     }
 

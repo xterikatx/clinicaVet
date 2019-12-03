@@ -10,17 +10,17 @@
     <head>
         <meta charset="utf-8">
         <title>Agendar Consulta</title>
-        <link rel="icon" type="img/png" href="icon/logo.png" />
+        <link rel="icon" type="img/png" href="${pageContext.request.contextPath}/icon/logo.png" />
         <!-- <link rel="stylesheet" href="consulta.css"> -->
-        <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js" charset="utf-8"></script>
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/schedule.css" media="screen" />
-        <script src="js/masc.js" charset="utf-8"></script>
+        <script src="${pageContext.request.contextPath}/js/masc.js" charset="utf-8"></script>
     </head>
     <body>
 
         <section class="sec1"></section>
         <form action="newQuery" method="post" class="login-form">
-            <img id="back" type="image" src="icon/back.png" value="Voltar"  onClick="history.go(-1)" >
+            <img id="back" type="image" src="${pageContext.request.contextPath}/icon/back.png" value="Voltar" onClick="history.go(-1)" >
             
             <div align="center"><h5>${msg}</h5></div>
 
@@ -29,16 +29,16 @@
 
             <div class="txtb">
                 <input type="text"  name="query.name" value="${query.name}">
-                <span data-placeholder="Nome"></span>
+                <span data-placeholder="Nome:"></span>
             </div>
 
             <div class="txtb">
                 <input name="query.phone" value="${query.phone}" type="text"  minlength="11" maxlength="11" OnKeyPress="formatar('##-####-####', this)">
-                <span data-placeholder="Celular"></span>
+                <span data-placeholder="Celular:"></span>
             </div>
             <div class="txtb">
-                <input type="text"  name="query.cpf"  value="${query.cpf}"p>
-                <span data-placeholder="CPF"></span>
+                <input type="text"  name="query.cpf"  value="${query.cpf}" minlength="10" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+                <span data-placeholder="CPF:"></span>
             </div>
 
 
