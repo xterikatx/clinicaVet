@@ -12,21 +12,20 @@ import javax.persistence.EntityManager;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 
-
 /**
  *
  * @author vinicius
  */
 public class QueryRepository {
-    
-    public static void save(Query query){
+
+    public static void save(Query query) {
         EntityManager manager = ConnectionFactory.getManager();
         try {
-         manager.getTransaction().begin();
-         manager.persist(query);
-         manager.getTransaction().commit();
+            manager.getTransaction().begin();
+            manager.persist(query);
+            manager.getTransaction().commit();
         } catch (Exception e) {
-                   // Verifica se a transação está ativa ainda.
+            // Verifica se a transação está ativa ainda.
             // Um erro pode encerrar a transação sem permitir
             // um rollback pelo programador.
             if (manager.getTransaction().isActive()) {
@@ -39,26 +38,24 @@ public class QueryRepository {
 
     }
 
-    public static List<Query> listAll (){
+    public static List<Query> listAll() {
         EntityManager manager = ConnectionFactory.getManager();
-      Session session = (Session) manager.getDelegate();
+        Session session = (Session) manager.getDelegate();
         Criteria criteria = session.createCriteria(Query.class);
         List<Query> querys = criteria.list();
         manager.close();
         return querys;
     }
-    
-    
-    public static void update(Query query){
+
+    public static void update(Query query) {
         EntityManager manager = ConnectionFactory.getManager();
         try {
-          manager.getTransaction();
-          manager.merge(query);
-          manager.getTransaction().commit();
+            manager.getTransaction();
+            manager.merge(query);
+            manager.getTransaction().commit();
         } catch (Exception e) {
 
-
-             if (manager.getTransaction().isActive()) {
+            if (manager.getTransaction().isActive()) {
                 manager.getTransaction().rollback();
             }
             e.printStackTrace();
@@ -67,34 +64,35 @@ public class QueryRepository {
         }
 
     }
-    public static Query findById(String cod){
+
+    public static Query findById(String cod) {
         EntityManager manager = ConnectionFactory.getManager();
         Query query = manager.find(Query.class, cod);
         return query;
     }
-    public static List<Query> findByName(String name){
+
+    public static List<Query> findByName(String name) {
         EntityManager manager = ConnectionFactory.getManager();
         List<Query> query = manager.createQuery("select a from query a where a.nome=:name")
                 .setParameter("name", name).getResultList();
         return query;
-    } 
+    }
 
-     public void DeletebyId(String Id){
-         EntityManager manager = ConnectionFactory.getManager();
-         manager.getTransaction().begin();
-         Query query = findById(Id);
-         
-         try {
-             manager.remove(manager.getReference(Query.class,query.getId()));
-             manager.getTransaction().commit();
-             
-             
-         } catch (Exception e) {
-             if (manager.getTransaction().isActive()){
-                 manager.getTransaction().rollback();
-             }
-         }finally{
-             manager.close();
+    public void DeletebyId(String Id) {
+        EntityManager manager = ConnectionFactory.getManager();
+        manager.getTransaction().begin();
+        Query query = findById(Id);
+
+        try {
+            manager.remove(manager.getReference(Query.class, query.getId()));
+            manager.getTransaction().commit();
+
+        } catch (Exception e) {
+            if (manager.getTransaction().isActive()) {
+                manager.getTransaction().rollback();
+            }
+        } finally {
+            manager.close();
         }
-     }
+    }
 }
