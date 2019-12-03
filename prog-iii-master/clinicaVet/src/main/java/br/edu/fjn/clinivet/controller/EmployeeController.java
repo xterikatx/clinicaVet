@@ -11,7 +11,6 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.edu.fjn.clinivet.model.employee.Employee;
-import br.edu.fjn.clinivet.repository.CustomerRepository;
 import br.edu.fjn.clinivet.repository.EmployeeRepository;
 import javax.inject.Inject;
 
@@ -38,11 +37,6 @@ public class EmployeeController {
         //result.redirectTo(this).listCustomer();
     }
 
-    @Get("list{id}")
-    public void listById(String id) {
-        CustomerRepository.findById(id);
-        //result.redirectTo(this).findCustomer();
-    }
-
+   
     
 }

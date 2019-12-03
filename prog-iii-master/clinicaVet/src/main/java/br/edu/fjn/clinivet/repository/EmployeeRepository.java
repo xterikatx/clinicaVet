@@ -40,6 +40,8 @@ public class EmployeeRepository {
             manager.close();
         }
     }
+    
+
 
     public static void update(Employee employee) {
         EntityManager manager = ConnectionFactory.getManager();

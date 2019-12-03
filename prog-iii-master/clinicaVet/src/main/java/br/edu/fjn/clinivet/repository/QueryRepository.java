@@ -9,6 +9,8 @@ import br.edu.fjn.clinivet.model.query.Query;
 import br.edu.fjn.clinivet.repository.util.ConnectionFactory;
 import java.util.List;
 import javax.persistence.EntityManager;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
 
 
 /**
@@ -37,6 +39,16 @@ public class QueryRepository {
 
     }
 
+    public static List<Query> listAll (){
+        EntityManager manager = ConnectionFactory.getManager();
+      Session session = (Session) manager.getDelegate();
+        Criteria criteria = session.createCriteria(Query.class);
+        List<Query> querys = criteria.list();
+        manager.close();
+        return querys;
+    }
+    
+    
     public static void update(Query query){
         EntityManager manager = ConnectionFactory.getManager();
         try {

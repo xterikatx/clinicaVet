@@ -10,12 +10,11 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
-import br.edu.fjn.clinivet.model.customer.Customer;
 import br.edu.fjn.clinivet.model.employee.Employee;
-import br.edu.fjn.clinivet.repository.CustomerRepository;
 import br.edu.fjn.clinivet.repository.EmployeeRepository;
 
 import br.edu.fjn.clinivet.view.components.UserSession;
+import java.util.List;
 import javax.inject.Inject;
 
 /**
@@ -44,11 +43,13 @@ public class AuthController {
     public void customerQuery() {
     }
 
+   
+
     @Post("authenticate")
     public void signin(String cpf, String password) {
 
         Employee a = EmployeeRepository.findByCpfandPassword(cpf, password);
-        
+
         if (a != null) {
             System.out.println("pp" + a);
             userSession.setCpf(cpf);
@@ -57,8 +58,8 @@ public class AuthController {
             result.redirectTo(AuthController.class).login();
 
         }
-        
-     /*   Employee b = EmployeeRepository.findByCpfandPassword(cpf, password);
+
+        /*   Employee b = EmployeeRepository.findByCpfandPassword(cpf, password);
 
         if (b != null) {
             userSession.setCpf(cpf);

@@ -1,14 +1,10 @@
 br.edu.fjn.clinivet.annotations
-br.edu.fjn.clinivet.application
 br.edu.fjn.clinivet.controller
 br.edu.fjn.clinivet.interceptors
-br.edu.fjn.clinivet.model.attedence
-br.edu.fjn.clinivet.model.customer
 br.edu.fjn.clinivet.model.employee
 br.edu.fjn.clinivet.model.query
 br.edu.fjn.clinivet.model.service
 br.edu.fjn.clinivet.model.teste
-br.edu.fjn.clinivet.model.vet
 br.edu.fjn.clinivet.repository
 br.edu.fjn.clinivet.repository.util
 br.edu.fjn.clinivet.view.components

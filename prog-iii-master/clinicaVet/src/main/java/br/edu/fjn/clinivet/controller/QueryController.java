@@ -8,10 +8,13 @@ package br.edu.fjn.clinivet.controller;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
+import br.com.caelum.vraptor.Get;
+
 import br.com.caelum.vraptor.Result;
 
 import br.edu.fjn.clinivet.annotations.Private;
 import br.edu.fjn.clinivet.model.query.Query;
+import br.edu.fjn.clinivet.repository.EmployeeRepository;
 import br.edu.fjn.clinivet.repository.QueryRepository;
 import javax.inject.Inject;
 
@@ -21,7 +24,7 @@ import javax.inject.Inject;
  */
 @Private
 @Controller
-@Path("auth")
+@Path("query")
 public class QueryController {
 
     @Inject
@@ -35,4 +38,16 @@ public class QueryController {
 
         result.redirectTo(AuthController.class).customerQuery();
     }
+
+    @Get("listQuery")
+    public void query() {
+
+    }
+
+    @Get("list")
+    public void listById(String id) {
+        EmployeeRepository.findById(id);
+        result.redirectTo(this).query();
+    }
+
 }
