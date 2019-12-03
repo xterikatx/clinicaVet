@@ -11,6 +11,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+
 
 /**
  *
@@ -67,13 +70,23 @@ public class CustomerRepository {
         Customer customer = manager.find(Customer.class, cpf);
         return customer;        
     }
+        public static List<Customer> CustomerList(){
+        EntityManager manager = ConnectionFactory.getManager();
+        Session session = (Session) manager.getDelegate();
+        Criteria criteria = session.createCriteria(Customer.class);
+        List<Customer> customer = criteria.
+                setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
+                .list();
+        manager.close();
+        return customer;  
+    }
 
-   /* public static List<Customer> findByName(String name){
+    public static List<Customer> findByName(String name){
         EntityManager manager = ConnectionFactory.getManager();
         List<Customer> customer = manager.createQuery("select c from customer c where c.name=:name ")
                 .setParameter("name", name).getResultList();
         return customer;  
-    }*/
+    }
     public static Customer findPassword(String password){
         EntityManager manager = ConnectionFactory.getManager();
         Customer customer = (Customer) manager.createQuery("select c from customer c where c.password=:password").setParameter("password",password).getSingleResult();

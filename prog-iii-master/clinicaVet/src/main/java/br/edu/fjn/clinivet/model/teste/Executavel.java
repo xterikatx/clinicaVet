@@ -6,6 +6,8 @@
 package br.edu.fjn.clinivet.model.teste;
 import br.edu.fjn.clinivet.repository.CustomerRepository;
 import br.edu.fjn.clinivet.model.customer.Customer;
+import br.edu.fjn.clinivet.model.employee.Employee;
+import br.edu.fjn.clinivet.repository.EmployeeRepository;
 /**
  *
  * @author erika
@@ -14,8 +16,16 @@ public class Executavel {
     public static void main(String[] args) {
 
         Customer customer = new Customer();
-        CustomerRepository.findById("ff8081816ec715b3016ec715b58a0000");
-        System.out.println("cliente:"+CustomerRepository.findByName("Vinicius"));
+        System.out.println(""+CustomerRepository.CustomerList());
+        
+        Employee employee = new Employee();
+        employee.setCpf(984234234);
+        employee.setName("vinicius");
+        employee.setPassword(123);
+        EmployeeRepository.save(employee);
+        
+
+        //System.out.println("cliente:"+CustomerRepository.findByName("Vinicius"));
        /* CustomerRepository.DeletebyId("1");
         System.out.println("Usuario deletado:"+customer.getId());
 		customerrepository.setName("Vitor");;
