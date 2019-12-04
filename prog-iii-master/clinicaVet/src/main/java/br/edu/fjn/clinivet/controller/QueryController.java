@@ -43,9 +43,9 @@ public class QueryController {
     @Get("listQuery")
     public void query() {
         QueryRepository queryrepository = new QueryRepository();
-        QueryRepository.listAll();
-        System.out.println("AQUIII" + QueryRepository.listAll());
-        result.include("querys");
+        List<Query> querys = QueryRepository.listAll();
+        System.out.println("AQUIIIIII" + QueryRepository.listAll());
+        result.include("querys", querys);
     }
 
 }
