@@ -25,12 +25,12 @@
         </div>
 
         <div class="txtb">
-          <input type="text" name="employee.cpf" value="${employee.cpf}"minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+          <input type="text" name="employee.cpf" value="${employee.cpf}"minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this); return onlynumber();">
           <span data-placeholder="CPF:"></span>
         </div>
 
         <div class="txtb">
-            <input type="text" name="employee.cellphone" value="${employee.cellphone}" minlength="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)">
+            <input type="text" name="employee.cellphone" value="${employee.cellphone}" minlength="12" maxlength="12" OnKeyPress="formatar('##-####-####', this); return onlynumber();">
             <span data-placeholder="Celular:"></span>
           </div>
 
