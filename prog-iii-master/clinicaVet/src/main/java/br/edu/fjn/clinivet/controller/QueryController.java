@@ -32,12 +32,15 @@ public class QueryController {
     private Result result;
 
     @Post("newQuery")
-    public void newQuery(Query query) {
+    public void customerQuery(Query query) {
         QueryRepository.save(query);
         System.out.println("QUERY" + query.getCreatedAt());
         result.include("msg", "Consulta agendada com sucesso! Entraremos em contato!");
-
-        result.redirectTo(AuthController.class).customerQuery();
+       result.redirectTo(QueryController.class).customerQuery();
+    }
+    
+    @Get("query")
+    public void customerQuery() {
     }
 
     @Get("listQuery")

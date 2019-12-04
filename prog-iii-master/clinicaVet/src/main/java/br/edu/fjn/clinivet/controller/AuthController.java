@@ -37,13 +37,7 @@ public class AuthController {
     @Get("signup")
     public void signup() {
 
-    }
-
-    @Get("query")
-    public void customerQuery() {
-    }
-
-   
+    }   
 
     @Post("authenticate")
     public void signin(String cpf, String password) {

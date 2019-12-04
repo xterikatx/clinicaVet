@@ -1,6 +1,9 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
+
 <html lang="br">
     <head>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -74,11 +77,11 @@
                 <tbody>
                 <c:forEach items="${querys}" var="query">
                     <tr>
-                        <td>${query.id}</td>
-                        <td>${query.cpf}</td>
-                        <td>${query.name}</td>
-                        <td>${query.phone}</td>
-                        <td>${query.createdAt}</td>
+                        <td>${query.getId()}</td>
+                        <td>${query.getCpf()}</td>
+                        <td>${query.getName()}</td>
+                        <td>${query.getPhone()}</td>
+                        <td>${query.getCreatedAt()}</td>
              
                         <td>
                             <a href="#">Remover</a>
