@@ -34,8 +34,8 @@
                     <a href="index.html" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
                 </div>
                 <ul>
-                    <li><a href="index.html" title="Pagina Inicial">Início</a></li>
-                    <li><a href="consulta.html">Clíentes</a></li>
+                    <li><a href="index.html" title="Pagina Inicial">Inicio</a></li>
+                    <li><a href="consulta.html">Clientes</a></li>
                     <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Agendamentos</a></li>
                     <div class="dropdown">
                         <button class="dropbtn">Username</button>
@@ -63,16 +63,16 @@
             </div>
         </div>
 	
-	<form>
-        <div class="form-row align-items-center" style="padding: 0px 30px;">
+        <form action="search" method="post">
+      <!--  <div class="form-row align-items-center" style="padding: 0px 30px;">
             <div class="col-auto">
                 <label class="sr-only" for="inlineFormInput">Name</label>
-                <input type="text" class="form-control mb-2" id="teste" placeholder="Jane Doe">
-            </div>
+                <input type="text" class="form-control mb-2" id="teste" placeholder="CPF" name="query.cpf" value="">
+            </div>-->
             <div class="col-auto">
                 <label class="sr-only" for="teste">Username</label>
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="teste" placeholder="Username">
+                    <input type="text" class="form-control" id="teste" placeholder="Username" name="query.name" value="${query.name}">
                 </div>
             </div>
             
@@ -105,7 +105,9 @@
              
                         <td>
                             <a href="${pageContext.request.contextPath}/query/remove/${query.getId()}">Remover</a>
+                            <a href="${pageContext.request.contextPath}/query/update/${query.getId()}">Update</a>
                         </td>
+
                     </tr>
                 </c:forEach>
                 <!--   <tr>

@@ -5,12 +5,15 @@
  */
 package br.edu.fjn.clinivet.repository;
 
+import br.edu.fjn.clinivet.model.employee.Employee;
 import br.edu.fjn.clinivet.model.query.Query;
 import br.edu.fjn.clinivet.repository.util.ConnectionFactory;
 import java.util.List;
 import javax.persistence.EntityManager;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -94,5 +97,19 @@ public class QueryRepository {
         } finally {
             manager.close();
         }
+    }
+       public List<Query> FindForIlike(String name) {
+        EntityManager manager = ConnectionFactory.getManager();
+        Session session = (Session) manager.
+                getDelegate();
+        Criteria c = session.createCriteria(Query.class);
+
+        c.add(Restrictions.
+                ilike("name", name,
+                        MatchMode.ANYWHERE));
+        c.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+        List<Query> querys = c.list();
+        manager.close();
+        return querys;
     }
 }

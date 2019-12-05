@@ -87,7 +87,7 @@ public class EmployeeRepository {
 
    public static List<Employee> findByName(String name){
         EntityManager manager = ConnectionFactory.getManager();
-        List<Employee> employee = manager.createQuery("select c from customer c where c.name=:name ")
+        List<Employee> employee = manager.createQuery("select e from employee e where e.name=:name ")
                 .setParameter("name", name).getResultList();
         return employee;  
     }
