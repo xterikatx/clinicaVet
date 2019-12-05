@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bem-vindo Ã  ClÃ­nica Rabbit</title>
+        <title>Bem-vindo a Clínica Veterinária Rabbit</title>
         <link rel="icon" type="img/png" href="icon/logo.png" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -62,6 +62,26 @@
                 </div>
             </div>
         </div>
+	
+	<form>
+        <div class="form-row align-items-center" style="padding: 0px 30px;">
+            <div class="col-auto">
+                <label class="sr-only" for="inlineFormInput">Name</label>
+                <input type="text" class="form-control mb-2" id="teste" placeholder="Jane Doe">
+            </div>
+            <div class="col-auto">
+                <label class="sr-only" for="teste">Username</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="teste" placeholder="Username">
+                </div>
+            </div>
+            
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </div>
+        </div>
+    </form>
+
         <div style="margin-top:20px; width: 100%;  padding: 30px;">
             <table class="table table-striped  ">
                 <thead>
