@@ -13,6 +13,8 @@ import javax.persistence.NoResultException;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Restrictions;
 
 
 /**
@@ -83,13 +85,13 @@ public class EmployeeRepository {
         return employee;  
     }
 
-   /* public static List<Employee> findByName(String name){
+   public static List<Employee> findByName(String name){
         EntityManager manager = ConnectionFactory.getManager();
         List<Employee> employee = manager.createQuery("select c from customer c where c.name=:name ")
                 .setParameter("name", name).getResultList();
         return employee;  
     }
-    public static Employee findPassword(String password){
+   /* public static Employee findPassword(String password){
         EntityManager manager = ConnectionFactory.getManager();
         Employee employee = (Employee) manager.createQuery("select c from customer c where c.password=:password").setParameter("password",password).getSingleResult();
         manager.close();
@@ -131,17 +133,19 @@ public class EmployeeRepository {
              manager.close();
         }
      }
-   
-  /* public static boolean validate(String cpf, String password) {
-            CustomerRepository customerrepository =  new CustomerRepository();
-            
-            Customer a =  customerrepository.findByCpf(cpf)
-       
-       
-           
-        
-        return false;
-    }*/
+   public List<Employee> FindForIlike(String name) {
+        EntityManager manager = ConnectionFactory.getManager();
+        Session session = (Session) manager.
+                getDelegate();
+        Criteria c = session.createCriteria(Employee.class);
 
+        c.add(Restrictions.
+                ilike("nome", name,
+                        MatchMode.ANYWHERE));
+        c.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+        List<Employee> employee = c.list();
+        manager.close();
+        return employee;
+    }
    
 }
