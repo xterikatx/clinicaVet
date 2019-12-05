@@ -84,7 +84,7 @@
                         <td>${query.getCreatedAt()}</td>
              
                         <td>
-                            <a href="#">Remover</a>
+                            <a href="${pageContext.request.contextPath}/query/remove/${query.getId()}">Remover</a>
                         </td>
                     </tr>
                 </c:forEach>

@@ -50,5 +50,11 @@ public class QueryController {
         System.out.println("AQUIIIIII" + QueryRepository.listAll());
         result.include("querys", querys);
     }
-
+    
+    @Get("remove/{id}")
+    public void remove (String id){
+         QueryRepository queryrepository = new QueryRepository();
+        queryrepository.DeletebyId(id);
+        result.redirectTo(this).query();
+    }
 }

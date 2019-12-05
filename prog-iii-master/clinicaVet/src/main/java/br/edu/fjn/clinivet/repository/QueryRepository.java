@@ -65,9 +65,9 @@ public class QueryRepository {
 
     }
 
-    public static Query findById(String cod) {
+    public static Query findById(String id) {
         EntityManager manager = ConnectionFactory.getManager();
-        Query query = manager.find(Query.class, cod);
+        Query query = manager.find(Query.class, id);
         return query;
     }
 
