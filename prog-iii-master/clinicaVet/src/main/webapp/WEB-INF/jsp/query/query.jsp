@@ -63,8 +63,8 @@
         </div>
 	
         <form action="search" method="post">
-      <!--  <div class="form-row align-items-center" style="padding: 0px 30px;">
-            <div class="col-auto">
+     	    <div class="form-row align-items-center" style="padding: 0px 30px;">
+         <--<div class="col-auto">
                 <label class="sr-only" for="inlineFormInput">Name</label>
                 <input type="text" class="form-control mb-2" id="teste" placeholder="CPF" name="query.cpf" value="">
             </div>-->
