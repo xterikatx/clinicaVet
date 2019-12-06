@@ -9,8 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Bem-vindo a Clínica Veterinária Rabbit</title>
         <link rel="icon" type="img/png" href="icon/logo.png" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+	<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/index.css" media="screen"/>
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/navbar.css" media="screen" />
