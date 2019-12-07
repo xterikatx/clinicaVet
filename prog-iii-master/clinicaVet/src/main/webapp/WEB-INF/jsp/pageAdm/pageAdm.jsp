@@ -83,78 +83,78 @@
     </section>
     
     <section class="cont2">
-      <img src="icon/pata.png" alt="" style="margin-left: 100px; margin-top: 31px; height: 35px; position: absolute;">
-      <h1 style="margin-left: 130px; padding: 30px;">Nossos Serviços:</h1>
-      
-      <div class="card">
-        <img id="cir" src="img/rab.jpg">
-        <div style="width: 205px; height: 90px; text-align: center; position: relative;">
-          <p style="border-radius: 10px; font-size: 25px; font-weight: bold; margin-top:-290px; margin-left: 30%; margin-bottom: 50px; color:rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.692); padding: 3px;">
-            Cirurgias
-          </p>
+      <img src="icon/pata.png" alt="" style="margin-left: 100px; margin-top: 18px; height: 35px; position: absolute;">
+      <h1 style="margin-left: 130px; padding: 20px;">Nossos Serviços:</h1>
+      <div class="container">
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <img id="cir" src="img/rab.jpg" style="border-radius: 10px 10px 0 0; height: 200px; margin-top: 59px; width: 280px;">
+              <h3>Cirurgias</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>
+                Se necessário, realizamos vários procedimentos 
+                cirúgicos em nossa clínica. Agende uma consulta.
+              </p>
+              <a class="bt" href="#">Saiba mais</a>
+            </div>
+          </div>
         </div>
-        
-        <div id="textopublic">
-          <span>
-            Se necessário, realizamos vários procedimentos 
-            cirúgicos em nossa clínica.Agende uma consulta.
-          </span>
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <img id="cir" src="img/dog2.jpg" style="border-radius: 10px 10px 0 0; height: 200px; margin-top: 59px; width: 280px;">
+              <h3>Banho</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>
+                Aqui também é lugar de embelezar nossos lindos pets.
+                Confira e agende o seu horário.
+              </p>
+              <a class="bt" href="#">Saiba mais</a>
+            </div>
+          </div>
         </div>
-        <input title="Veja Nossos Serviços" type="submit" value="Saiba mais" class="bt">
-      </div><!-- Fim da div card-->
-      
-      <div class="card2">
-        <img id="cir" src="img/dog2.jpg">
-        <div style="width: 205px; height: 90px; text-align: center; position: relative;">
-          <p style="border-radius: 10px;font-size: 25px; font-weight: bold; margin-top:-290px; margin-left: 30%;margin-bottom: 50px; color:rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.692); padding: 3px;">
-            Banho e Tosa
-          </p>
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <img id="cir" src="img/cat.jpg" style="border-radius: 10px 10px 0 0; height: 200px; margin-top: 59px; width: 280px;">
+              <h3>Tosa</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>
+                Seu pet ainda mais bonito, cachorro, gato, 
+                coelho os melhores serviços para o seu pet
+              </p>
+              <a class="bt" href="#">Saiba mais</a>
+            </div>
+          </div>
         </div>
-        
-        <div id="textopublic">
-          <span>
-            Aque também é lugar de embelezar nossos lindo pets. Confira
-            agende o seu horário.
-          </span>
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <img id="cir" src="img/codrab.jpg" style="border-radius: 10px 10px 0 0; height: 200px; margin-top: 59px; width: 280px;">
+              <h3>Consultas</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>
+                Se necessário, realizamos vários procedimentos 
+                cirúgicos em nossa clínica. Agende uma consulta.
+              </p>
+              <a class="bt" href="#">Saiba mais</a>
+            </div>
+          </div>
         </div>
-        <input title="Veja Nossos Serviços" type="submit" value="Saiba maís" class="bt">
-      </div><!-- Fim da div card-->
-      
-      <div class="card3">
-        <img id="cir" src="img/cat.jpg">
-        <div style="width: 205px; height: 90px; text-align: center; position: relative;">
-          <p style="border-radius: 10px;font-size: 25px; font-weight: bold; margin-top:-290px; margin-left: 30%;margin-bottom: 50px; color:rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.692); padding: 3px;">
-            Cirurgias
-          </p>
-        </div>
-        
-        <div id="textopublic">
-          <span>
-            Se necessário, realizamos vários procedimentos 
-            cirúgicos em nossa clínica.Agende uma consulta.
-          </span>
-        </div>
-        
-        <input title="Veja Nossos Serviços" type="submit" value="Saiba mais" class="bt">
-      </div><!-- Fim da div card-->
-      
-      <div class="card4">
-        <img id="cir" src="img/codrab.jpg">
-        <div style="width: 205px; height: 90px; text-align: center; position: relative;">
-          <p style="border-radius: 10px; font-size: 25px; font-weight: bold; margin-top:-290px; margin-left: 30%;margin-bottom: 50px; color:rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.692); padding: 3px;">
-            Consultas
-          </p>
-        </div>
-        
-        <div id="textopublic">
-          <span>
-            Realize consulta com seu pet, cachorro, gato, coelho os melhores serviços
-            para o seu bichinho
-          </span>
-        </div>
-        
-        <input title="Veja Nossos Serviços" type="submit" value="Saiba mais" class="bt">
-      </div><!-- Fim da div card-->
+      </div>
     </section>
   </div><!-- divbody -->
   
