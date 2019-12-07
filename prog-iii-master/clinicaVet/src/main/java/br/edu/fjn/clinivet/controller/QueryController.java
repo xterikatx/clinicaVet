@@ -61,12 +61,17 @@ public class QueryController {
     public void find(Query query) {
         QueryRepository queryRepository = new QueryRepository();
         List<Query> querys = queryRepository.FindForIlike(query.getName());
-      
+
         result.include("querys", querys);
         result.of(this).query();
     }
 
-    @Post("update")
+    @Get("update/{id}")
+     public void update(){
+         
+     }
+  
+    @Post("update/{id}")
     public void update(Query query) {
         QueryRepository queryRepository = new QueryRepository();
         query.setName(query.getName());
