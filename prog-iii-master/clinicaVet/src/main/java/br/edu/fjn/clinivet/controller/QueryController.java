@@ -14,11 +14,9 @@ import br.com.caelum.vraptor.Result;
 
 import br.edu.fjn.clinivet.annotations.Private;
 import br.edu.fjn.clinivet.model.query.Query;
-import br.edu.fjn.clinivet.repository.EmployeeRepository;
 import br.edu.fjn.clinivet.repository.QueryRepository;
 import java.util.List;
 import javax.inject.Inject;
-import javax.ws.rs.POST;
 
 /**
  *
@@ -37,9 +35,9 @@ public class QueryController {
         QueryRepository.save(query);
         System.out.println("QUERY" + query.getCreatedAt());
         result.include("msg", "Consulta agendada com sucesso! Entraremos em contato!");
-       result.redirectTo(QueryController.class).customerQuery();
+        result.redirectTo(QueryController.class).customerQuery();
     }
-    
+
     @Get("query")
     public void customerQuery() {
     }
@@ -51,28 +49,31 @@ public class QueryController {
         System.out.println("AQUIIIIII" + QueryRepository.listAll());
         result.include("querys", querys);
     }
-    
+
     @Get("remove/{id}")
-    public void remove (String id){
-         QueryRepository queryrepository = new QueryRepository();
+    public void remove(String id) {
+        QueryRepository queryrepository = new QueryRepository();
         queryrepository.DeletebyId(id);
         result.redirectTo(this).query();
     }
+
     @Post("search")
-    public void find(Query query){
+    public void find(Query query) {
         QueryRepository queryRepository = new QueryRepository();
         List<Query> querys = queryRepository.FindForIlike(query.getName());
+      
         result.include("querys", querys);
         result.of(this).query();
     }
+
     @Post("update")
-    public void update(Query query){
+    public void update(Query query) {
         QueryRepository queryRepository = new QueryRepository();
         query.setName(query.getName());
         query.setCpf(query.getCpf());
         query.setPhone(query.getPhone());
         queryRepository.update(query);
         result.redirectTo(this).query();
-        
+
     }
 }

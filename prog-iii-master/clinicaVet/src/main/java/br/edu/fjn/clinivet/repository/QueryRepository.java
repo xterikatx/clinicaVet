@@ -5,10 +5,13 @@
  */
 package br.edu.fjn.clinivet.repository;
 
+import br.com.caelum.vraptor.Result;
+import br.edu.fjn.clinivet.controller.QueryController;
 import br.edu.fjn.clinivet.model.employee.Employee;
 import br.edu.fjn.clinivet.model.query.Query;
 import br.edu.fjn.clinivet.repository.util.ConnectionFactory;
 import java.util.List;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -20,6 +23,9 @@ import org.hibernate.criterion.Restrictions;
  * @author vinicius
  */
 public class QueryRepository {
+
+    @Inject
+    private Result result;
 
     public static void save(Query query) {
         EntityManager manager = ConnectionFactory.getManager();
@@ -98,18 +104,21 @@ public class QueryRepository {
             manager.close();
         }
     }
-       public List<Query> FindForIlike(String name) {
+
+    public List<Query> FindForIlike(String name) {
         EntityManager manager = ConnectionFactory.getManager();
         Session session = (Session) manager.
                 getDelegate();
         Criteria c = session.createCriteria(Query.class);
-
+        if (name == null) {
+            name = "";
+        }
         c.add(Restrictions.
                 ilike("name", name,
                         MatchMode.ANYWHERE));
-        c.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
         List<Query> querys = c.list();
         manager.close();
         return querys;
     }
+
 }

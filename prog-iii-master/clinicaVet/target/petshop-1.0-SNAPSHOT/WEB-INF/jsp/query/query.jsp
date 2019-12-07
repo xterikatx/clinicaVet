@@ -61,17 +61,15 @@
                 </div>
             </div>
         </div>
-	
+                    
+	            <div align="center"><h5>${msg}</h5></div>
+
         <form action="search" method="post">
      	    <div class="form-row align-items-center" style="padding: 0px 30px;">
-         <div class="col-auto">
-                <label class="sr-only" for="inlineFormInput">Name</label>
-                <input type="text" class="form-control mb-2" id="teste" placeholder="CPF" name="query.cpf" value="">
-            </div>
             <div class="col-auto">
                 <label class="sr-only" for="teste">Username</label>
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="teste" placeholder="Username" name="query.name" value="${query.name}">
+                    <input type="text" class="form-control" id="teste" placeholder="Pesquisar por nome" name="query.name" value="${query.name}">
                 </div>
             </div>
             
@@ -80,6 +78,7 @@
             </div>
         </div>
     </form>
+                
 
         <div style="margin-top:20px; width: 100%;  padding: 30px;">
             <table class="table table-striped  ">
