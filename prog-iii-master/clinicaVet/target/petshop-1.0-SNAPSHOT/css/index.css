@@ -24,8 +24,8 @@ section.sec1 {
   width: 100%;
   height: 650px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.897), rgba(53, 49, 49, 0.25)), url('../img/banner.jpg');
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
   text-align: center;
   position: relative;
   padding:10px 0;
@@ -37,7 +37,7 @@ section.cont {
   height: 390px;
   padding: 30px 0px 60px;
   background: #ffffff;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 section.cont h1 {
@@ -52,11 +52,12 @@ section.cont p {
 }
 
 section.cont2 {
+  position: relative;
   overflow: auto;
   padding: 10px;
-  height: 500px;
+  height: 520px;
   background-color: #ffffff;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 section.cont2 h1 {
@@ -90,33 +91,6 @@ section.cont2 p {
   font-family: 'Open-sans' , sans-serif;
 }
 
-.card2 {
-  width: 260px;
-  height: 380px;
-  position: relative;
-  margin-left: 373px;
-  margin-top:-380px;
-  font-family: 'Open-sans' , sans-serif;
-}
-
-.card3 {
-  width: 260px;
-  height: 380px;
-  position: relative;
-  margin-left: 662px;
-  font-family: 'Open-sans' , sans-serif;
-  margin-top:-380px;
-}
-
-.card4 {
-  width: 260px;
-  height: 380px;
-  position: relative;
-  margin-left: 950px;
-  font-family: 'Open-sans' , sans-serif;
-  margin-top:-380px;
-}
-
 #cir {
   background-size:cover;
   width: 260px;
@@ -127,25 +101,14 @@ section.cont2 p {
   border-radius: 10px;
 }
 
-#textopublic {
-  margin-left: 10%;
-  background-color: rgba(0, 0, 0, 0.692);
-  width: 205px;
-  height: 90px;
-  text-align: center;
-  border-radius: 10px;
-  position: absolute;
-  padding: 10px 5px;
-}
-
 .bt {
-  margin-left: 30%;
-  margin-top:130px;
+  margin-left: 25%;
+  margin-top: 5px;
   position: absolute;
   font-size: 16px;
   display: block;
-  width: 103px;
-  height: 33px;
+  width: 90px;
+  height: 23px;
   border: none;
   background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
   background-size: 200%;
@@ -158,12 +121,6 @@ section.cont2 p {
 
 .bt:hover{
   background-position: right;
-}
-
-#textopublic span {
-  color: rgb(255, 255, 255);
-  font-weight: bold; 
-  font-size:16;
 }
 
 .foto {
@@ -191,7 +148,77 @@ section.cont2 p {
   object-fit: cover;
   display: block;
   position:relative;
-} 
+}
+
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .card {
+  position: relative;
+  /* padding: -13px 0; */
+}
+
+.container .card .face {
+  width: 280px;
+  height: 200px;
+  transition: 0.5s;
+  margin-left: -50px;
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background: #255F9A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border-radius: 10px 10px 0 0;
+}
+
+.container .card .face.face1 .content {
+  opacity: 0.6;
+  transition: 0.5;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card:hover .face.face1 .content img {
+  max-width: 300px;
+}
+
+.container .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+  border-radius: 0 0 10px 10px;
+}
+
+.container.card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+.container .card .face.face2 .content a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900px;
+  padding: 6px 0 0 0;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
 
 footer {
   width: 100%;
@@ -223,6 +250,16 @@ footer div {
   background-size: cover;
   position: relative;
   text-align: center;
-  padding:100px;
+  padding: 100px;
   z-index: -1;
+}
+
+span::selection {
+  background: green;
+}
+
+span::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
 }

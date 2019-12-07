@@ -29,7 +29,6 @@
         <a href="index.html" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
       </div>
       <ul>
-        <li><a href="auth/pageCustomer.jsp" title="Pagina Inicial">Início</a></li>
         <li><a href="${pageContext.request.contextPath}/query/query">Agendar consultas</a></li>
         <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Serviços</a></li>
         <li><a href="query/listQuery" class="ancora" title="Serviços Disponíveis">Listar consultas</a></li>

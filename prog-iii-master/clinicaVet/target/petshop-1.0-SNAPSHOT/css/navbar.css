@@ -35,8 +35,16 @@ nav.black {
 
 nav .logo img {
     float:left;
-    margin-top:5px;
-    height: 50px;
+    margin-top: 2.5px;
+    height: 55px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    border-radius: 50px;
+    opacity: 1;
+}
+
+nav .logo img:hover {
+    opacity: 0.8;
+    transition: 0.9;
 }
 
 nav ul {

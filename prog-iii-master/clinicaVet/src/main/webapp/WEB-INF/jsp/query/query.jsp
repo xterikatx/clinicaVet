@@ -30,10 +30,10 @@
         <header>
             <nav style="z-index: 1;">
                 <div class="logo" style="cursor: pointer;">
-                    <a href="index.html" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
+                    <a href="${pageContext.request.contextPath}/page" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
                 </div>
                 <ul>
-                    <li><a href="index.html" title="Pagina Inicial">Inicio</a></li>
+                    <li><a href="${pageContext.request.contextPath}/page" title="Pagina Inicial">Inicio</a></li>
                     <li><a href="consulta.html">Clientes</a></li>
                     <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Agendamentos</a></li>
                     <div class="dropdown">
@@ -64,10 +64,10 @@
 	
         <form action="search" method="post">
      	    <div class="form-row align-items-center" style="padding: 0px 30px;">
-         <--<div class="col-auto">
+         <div class="col-auto">
                 <label class="sr-only" for="inlineFormInput">Name</label>
                 <input type="text" class="form-control mb-2" id="teste" placeholder="CPF" name="query.cpf" value="">
-            </div>-->
+            </div>
             <div class="col-auto">
                 <label class="sr-only" for="teste">Username</label>
                 <div class="input-group mb-2">

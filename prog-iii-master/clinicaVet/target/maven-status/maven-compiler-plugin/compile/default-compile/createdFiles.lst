@@ -1,6 +1,6 @@
 br/edu/fjn/clinivet/annotations/Private.class
-br/edu/fjn/clinivet/repository/QueryRepository.class
 br/edu/fjn/clinivet/repository/EmployeeRepository.class
+br/edu/fjn/clinivet/repository/QueryRepository.class
 br/edu/fjn/clinivet/controller/EmployeeController.class
 br/edu/fjn/clinivet/model/employee/Employee.class
 br/edu/fjn/clinivet/model/teste/Executavel.class
