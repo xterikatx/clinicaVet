@@ -1,7 +1,7 @@
 # Habbit Veterinary Clinic
 Veterinary clinic system using Java / Hibernate / Vraptor
  
-## OBS 
+## Note 
 
 1. Create database in postgresql. Database name: **clinica**.
 
