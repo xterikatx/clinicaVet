@@ -19,7 +19,7 @@
     <body>
 
         <section class="sec1"></section>
-        <form action="newQuery" method="post" class="login-form">
+        <form action="update" method="post" class="login-form">
             <img id="back" type="image" src="${pageContext.request.contextPath}/icon/back.png" value="Voltar" onClick="history.go(-1)" >
             
             <div align="center"><h5>${msg}</h5></div>
@@ -27,6 +27,11 @@
 
             <h1>Editar consulta</h1>
 
+            <div class="txtb">
+                <input type="text"  name="query.id" value="${query.id}">
+                <span data-placeholder="Id: "></span>
+            </div>
+            
             <div class="txtb">
                 <input type="text"  name="query.name" value="${query.name}">
                 <span data-placeholder="Nome:"></span>

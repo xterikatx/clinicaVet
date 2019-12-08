@@ -12,6 +12,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import org.hibernate.annotations.ColumnDefault;
@@ -26,9 +27,9 @@ import org.hibernate.annotations.GenericGenerator;
 public class Query implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
+    private Integer id;
 
     @Column(nullable = false)
     private String cpf;
@@ -42,11 +43,11 @@ public class Query implements Serializable {
     @ColumnDefault("CURRENT_TIMESTAMP")
     protected Date createdAt;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -80,11 +81,5 @@ public class Query implements Serializable {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
-    }
-
-
-    @PrePersist
-    private void generateId() {
-        this.id = UUID.randomUUID().toString();
     }
 }

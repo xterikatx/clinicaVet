@@ -51,7 +51,7 @@ public class QueryController {
     }
 
     @Get("remove/{id}")
-    public void remove(String id) {
+    public void remove(Integer id) {
         QueryRepository queryrepository = new QueryRepository();
         queryrepository.DeletebyId(id);
         result.redirectTo(this).query();
@@ -66,12 +66,39 @@ public class QueryController {
         result.of(this).query();
     }
 
-    @Get("update/{id}")
-     public void update(){
-         
-     }
-  
-    @Post("update/{id}")
+    @Get("update")
+    public void update(){
+    }
+
+    @Post("update")
+    public void update(Query query) {
+        QueryRepository queryRepository = new QueryRepository();
+
+        if (queryRepository.findById(query.getId()) != null) {
+            Query q = queryRepository.findById(query.getId());
+
+            if (query.getCpf() != null) {
+                q.setCpf(query.getCpf());
+            }
+
+            if (query.getName() != null) {
+                q.setName(query.getName());
+            }
+
+            if (query.getPhone() != null) {
+                q.setPhone(query.getPhone());
+            }
+
+            queryRepository.update(q);
+            result.redirectTo(this).query();
+        } else {
+            result.include("msg", "Não Existe uma pizza com esse id!");
+            result.redirectTo(this).customerQuery();
+        }
+
+    }
+
+    /*  @Post("update/{id}")
     public void update(Query query) {
         QueryRepository queryRepository = new QueryRepository();
         query.setName(query.getName());
@@ -80,5 +107,5 @@ public class QueryController {
         queryRepository.update(query);
         result.redirectTo(this).query();
 
-    }
+    }*/
 }

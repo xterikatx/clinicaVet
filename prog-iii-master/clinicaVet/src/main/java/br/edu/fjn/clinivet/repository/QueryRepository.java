@@ -58,8 +58,9 @@ public class QueryRepository {
 
     public static void update(Query query) {
         EntityManager manager = ConnectionFactory.getManager();
+        manager.getTransaction().begin();
+
         try {
-            manager.getTransaction();
             manager.merge(query);
             manager.getTransaction().commit();
         } catch (Exception e) {
@@ -74,7 +75,7 @@ public class QueryRepository {
 
     }
 
-    public static Query findById(String id) {
+    public static Query findById(Integer id) {
         EntityManager manager = ConnectionFactory.getManager();
         Query query = manager.find(Query.class, id);
         return query;
@@ -87,10 +88,10 @@ public class QueryRepository {
         return query;
     }
 
-    public void DeletebyId(String Id) {
+    public void DeletebyId(Integer id) {
         EntityManager manager = ConnectionFactory.getManager();
         manager.getTransaction().begin();
-        Query query = findById(Id);
+        Query query = findById(id);
 
         try {
             manager.remove(manager.getReference(Query.class, query.getId()));

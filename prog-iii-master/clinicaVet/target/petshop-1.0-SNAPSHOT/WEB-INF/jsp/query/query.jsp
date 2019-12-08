@@ -3,13 +3,13 @@
 
 <html lang="br">
     <head>
-        
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Bem-vindo a Cl�nica Veterin�ria Rabbit</title>
         <link rel="icon" type="img/png" href="icon/logo.png" />
-	<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/index.css" media="screen"/>
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/navbar.css" media="screen" />
@@ -36,6 +36,8 @@
                     <li><a href="${pageContext.request.contextPath}/page" title="Pagina Inicial">Inicio</a></li>
                     <li><a href="consulta.html">Clientes</a></li>
                     <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Agendamentos</a></li>
+                    <li><a href="${pageContext.request.contextPath}/query/update" class="ancora" title="Serviços Disponíveis">Editar Consulta</a></li>
+
                     <div class="dropdown">
                         <button class="dropbtn">Username</button>
                         <div class="dropdown-content">
@@ -61,24 +63,24 @@
                 </div>
             </div>
         </div>
-                    
-	            <div align="center"><h5>${msg}</h5></div>
+
+        <div align="center"><h5>${msg}</h5></div>
 
         <form action="search" method="post">
-     	    <div class="form-row align-items-center" style="padding: 0px 30px;">
-            <div class="col-auto">
-                <label class="sr-only" for="teste">Username</label>
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="teste" placeholder="Pesquisar por nome" name="query.name" value="${query.name}">
+            <div class="form-row align-items-center" style="padding: 0px 30px;">
+                <div class="col-auto">
+                    <label class="sr-only" for="teste">Username</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="teste" placeholder="Pesquisar por nome" name="query.name" value="${query.name}">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 </div>
             </div>
-            
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-2">Submit</button>
-            </div>
-        </div>
-    </form>
-                
+        </form>
+
 
         <div style="margin-top:20px; width: 100%;  padding: 30px;">
             <table class="table table-striped  ">
@@ -93,34 +95,33 @@
                     </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${querys}" var="query">
-                    <tr>
-                        <td>${query.getId()}</td>
-                        <td>${query.getCpf()}</td>
-                        <td>${query.getName()}</td>
-                        <td>${query.getPhone()}</td>
-                        <td>${query.getCreatedAt()}</td>
-             
-                        <td>
-                            <a href="${pageContext.request.contextPath}/query/remove/${query.getId()}">Remover</a>
-                            <a href="${pageContext.request.contextPath}/query/update/${query.getId()}">Update</a>
-                        </td>
+                    <c:forEach items="${querys}" var="query">
+                        <tr>
+                            <td>${query.getId()}</td>
+                            <td>${query.getCpf()}</td>
+                            <td>${query.getName()}</td>
+                            <td>${query.getPhone()}</td>
+                            <td>${query.getCreatedAt()}</td>
 
+                            <td>
+                                <a href="${pageContext.request.contextPath}/query/remove/${query.getId()}">Remover</a>
+                            </td>
+
+                        </tr>
+                    </c:forEach>
+                    <!--   <tr>
+                   <td class="actions text-right">
+                       <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="id">
+                           <i class="fa fa-trash"></i> Cancelar
+                       </a>
+                   </td>
+               </tr> -->
+                    <!-- <?php endforeach; ?>
+                       <?php else : ?> -->
+                    <tr>
+                        <td colspan="6">Nenhum registro encontrado.</td>
                     </tr>
-                </c:forEach>
-                <!--   <tr>
-               <td class="actions text-right">
-                   <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="id">
-                       <i class="fa fa-trash"></i> Cancelar
-                   </a>
-               </td>
-           </tr> -->
-                <!-- <?php endforeach; ?>
-                   <?php else : ?> -->
-                <tr>
-                    <td colspan="6">Nenhum registro encontrado.</td>
-                </tr>
-                <!-- <?php endif; ?> -->
+                    <!-- <?php endif; ?> -->
                 </tbody>
             </table>
         </div>
