@@ -26,6 +26,7 @@ public class EmployeeRepository {
     public static void save(Employee employee) {
 
         EntityManager manager = ConnectionFactory.getManager();
+        
         try {
             manager.getTransaction().begin();
             manager.persist(employee);

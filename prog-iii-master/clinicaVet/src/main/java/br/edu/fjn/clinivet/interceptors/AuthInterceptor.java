@@ -21,9 +21,10 @@ import javax.inject.Inject;
  *
  * @author vinicius
  */
+//Classe responsavel por interceptações e acesso ao site.
 @Intercepts
 public class AuthInterceptor implements Interceptor {
-
+    //chamando construtores.
     @Inject
     private UserSession userSession;
     @Inject
@@ -33,8 +34,6 @@ public class AuthInterceptor implements Interceptor {
        // Se o Cadastro for logado ,redirecione para a pagina solicitada senão redirecione para o login
         if (userSession.isLogged()) {
             is.next(cm, o);
-            
-            
         }else{
             //redirecionar
             result.redirectTo(AuthController.class).login();

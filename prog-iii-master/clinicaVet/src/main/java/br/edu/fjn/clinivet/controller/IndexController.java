@@ -16,6 +16,7 @@ import br.edu.fjn.clinivet.annotations.Private;
 @Controller
 public class IndexController {
    
+    //método que chama página index
     @Get("/")
     public void index(){
      

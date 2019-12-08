@@ -20,7 +20,7 @@ import org.hibernate.annotations.GenericGenerator;
  * @author aluno
  */
 @Entity
-public class Employee implements Serializable {
+public class Employee {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -35,6 +35,7 @@ public class Employee implements Serializable {
 
     @Column(nullable = false)
     private String name;
+    
     private String cellphone;
 
     public String getCellphone() {

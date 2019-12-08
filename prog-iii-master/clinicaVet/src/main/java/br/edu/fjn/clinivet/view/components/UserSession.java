@@ -13,7 +13,9 @@ import javax.inject.Named;
  *
  * @author vinicius
  */
-@SessionScoped
+
+//Pega os dados, para saber se os dados em questão pode logar.
+@SessionScoped //escopo de sessão.
 @Named("userSession")
 public class UserSession implements Serializable {
 
@@ -27,7 +29,8 @@ public class UserSession implements Serializable {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
+    
+    //verifica se o cpf é diferente de nulo
     public boolean isLogged() {
         return cpf != null ;
     }

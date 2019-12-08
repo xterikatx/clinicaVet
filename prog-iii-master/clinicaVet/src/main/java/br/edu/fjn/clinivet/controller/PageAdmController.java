@@ -19,7 +19,7 @@ import br.edu.fjn.clinivet.annotations.Private;
 @Private
 public class PageAdmController {
     
-    
+    //método que chama a página de adm
     @Get("page")
     public void pageAdm(){
      

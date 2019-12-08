@@ -30,21 +30,17 @@
         <header>
             <nav style="z-index: 1;">
                 <div class="logo" style="cursor: pointer;">
-                    <a href="${pageContext.request.contextPath}/page" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
+                    <a href="${pageContext.request.contextPath}/page" title="Home Page"><img src="${pageContext.request.contextPath}/icon/logo.png" alt="logo"></a>
                 </div>
                 <ul>
                     <li><a href="${pageContext.request.contextPath}/page" title="Pagina Inicial">Inicio</a></li>
-                    <li><a href="consulta.html">Clientes</a></li>
                     <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Agendamentos</a></li>
                     <li><a href="${pageContext.request.contextPath}/query/update" class="ancora" title="Serviços Disponíveis">Editar Consulta</a></li>
 
                     <div class="dropdown">
-                        <button class="dropbtn">Username</button>
+                        <button class="dropbtn">${userSession.cpf}</button>
                         <div class="dropdown-content">
                             <a href="client.html">Meu Perfil</a>
-                            <a href="login.html">Entrar</a>
-                            <a href="signin.html">Cadastro</a>
-                            <a href="adm.html">Administrador</a>
                             <a href="login.html">Sair</a>
                         </div>
                     </div> 

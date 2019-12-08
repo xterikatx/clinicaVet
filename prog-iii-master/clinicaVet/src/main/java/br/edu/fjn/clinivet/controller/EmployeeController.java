@@ -25,12 +25,16 @@ public class EmployeeController {
     @Inject
     private Result result;
 
+    //controlador que salva um novo funcionário
     @Post("newEmployee")
     public void newEmployee(Employee employee) {
+        //chamando método save do repositorio
         EmployeeRepository.save(employee);
+        //redirecionando para o login (p fazer o login, obvio)
         result.redirectTo(AuthController.class).login();
     }
 
+    //controlador que atualiza um dado do funcionário
     @Post("updateEmployee")
     public void editCustomer(Employee employee) {
         EmployeeRepository.update(employee);

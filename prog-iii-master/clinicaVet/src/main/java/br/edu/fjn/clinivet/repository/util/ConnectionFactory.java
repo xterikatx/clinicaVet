@@ -13,18 +13,35 @@ import javax.persistence.Persistence;
  *
  * @author erika
  */
+
+/*DEFININDO A CONEXÃO COM O BANCO DE DADOS... */
+
 public class ConnectionFactory {
-     private static final EntityManagerFactory factory
+
+    /*
+        Estamos chamando o nome da persitencia lá no persistence.xml...
+        Sem a persistencia definida com o nome e senha do banco corretos
+        O banco não funciona...
+        
+        Estamos persistindo uma conexão chamada "factory".
+     */
+    private static final EntityManagerFactory factory
             = Persistence.createEntityManagerFactory("petshop");
 
+    /*
+      O metodo getManager irá ser definido nos repositorios...
+      Quando chamamos esse método estamos tentando chamar a conexão... 
+      -> Definindo lá nos repositórios: EntityManager manager = ConnectionFactory.getManager();
+    
+     **/
     public static EntityManager getManager() {
         return factory.createEntityManager();
     }
-    
+
     /**
-     * Fechar conexão
+     Quando chamos esse metódo, estamos fechando a conexão...
      */
-    public static void closeUp(){
+    public static void closeUp() {
         factory.close();
     }
 }

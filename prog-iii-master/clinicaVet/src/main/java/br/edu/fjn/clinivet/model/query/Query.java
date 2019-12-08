@@ -24,7 +24,7 @@ import org.hibernate.annotations.GenericGenerator;
  * @author vinicius
  */
 @Entity
-public class Query implements Serializable {
+public class Query {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

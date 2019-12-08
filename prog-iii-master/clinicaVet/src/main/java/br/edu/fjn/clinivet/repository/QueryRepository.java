@@ -24,14 +24,15 @@ import org.hibernate.criterion.Restrictions;
  */
 public class QueryRepository {
 
-    @Inject
-    private Result result;
-
     public static void save(Query query) {
+        //chamando conexão.
         EntityManager manager = ConnectionFactory.getManager();
         try {
+            //inicia processo
             manager.getTransaction().begin();
+            //pegando dados
             manager.persist(query);
+            //enviando os dados
             manager.getTransaction().commit();
         } catch (Exception e) {
             // Verifica se a transação está ativa ainda.
@@ -42,25 +43,39 @@ public class QueryRepository {
             }
             e.printStackTrace();
         } finally {
+            //fechando a conexão.
             manager.close();
         }
 
     }
 
-    public static List<Query> listAll() {
+    //listando todos os dados
+    public static List<Query> listAll() { //lista - ARRAY...
+        //chamando conexão
         EntityManager manager = ConnectionFactory.getManager();
+        //método que serve pra fazer busca no banco através de objetos.
         Session session = (Session) manager.getDelegate();
+        //dentro do session surge uma criteria. 
+        //a criteria faz busca em uma determinada class.
+        //-> Query.class.
+        //É necessário uma session para ter uma criteria.
         Criteria criteria = session.createCriteria(Query.class);
+        //declarando um array, e colocando dentro dele, tudo que a criteria
+        //achou na classe Query.
         List<Query> querys = criteria.list();
+        //fechando conexão
         manager.close();
+        //retornando a lista...
         return querys;
     }
 
+    /*ATUALIZAR*/
     public static void update(Query query) {
         EntityManager manager = ConnectionFactory.getManager();
-        manager.getTransaction().begin();
 
         try {
+            manager.getTransaction().begin();
+            //une tudo aquilo que já tem com uma nova transação
             manager.merge(query);
             manager.getTransaction().commit();
         } catch (Exception e) {
@@ -75,28 +90,31 @@ public class QueryRepository {
 
     }
 
+    /*ENCONTRAR POR ID.*/
     public static Query findById(Integer id) {
         EntityManager manager = ConnectionFactory.getManager();
+        //buscando o id na classe Query.class.
         Query query = manager.find(Query.class, id);
         return query;
     }
 
-    public static List<Query> findByName(String name) {
+    /*public static List<Query> findByName(String name) {
         EntityManager manager = ConnectionFactory.getManager();
         List<Query> query = manager.createQuery("select a from query a where a.nome=:name")
                 .setParameter("name", name).getResultList();
         return query;
-    }
-
+    }*/
     public void DeletebyId(Integer id) {
         EntityManager manager = ConnectionFactory.getManager();
         manager.getTransaction().begin();
         Query query = findById(id);
 
         try {
+            //chamando a referencia da classe (parametros)
+            //dentro do reference ele está definindo qual a classe, e 
+            //chamando o metodo "findById" pra chamar o id.
             manager.remove(manager.getReference(Query.class, query.getId()));
             manager.getTransaction().commit();
-
         } catch (Exception e) {
             if (manager.getTransaction().isActive()) {
                 manager.getTransaction().rollback();
@@ -106,14 +124,21 @@ public class QueryRepository {
         }
     }
 
+    //metodo de buscar
     public List<Query> FindForIlike(String name) {
         EntityManager manager = ConnectionFactory.getManager();
+        //método que serve pra fazer busca no banco através de objetos.
         Session session = (Session) manager.
                 getDelegate();
         Criteria c = session.createCriteria(Query.class);
+        
+        //tratamento de erro para caso o nome seja "null"
         if (name == null) {
             name = "";
         }
+        
+        //criando restrição, nela, vai passar o que é obrigado usar o método
+        //ilike para fazer a pesquisa. matchMode: orderBy
         c.add(Restrictions.
                 ilike("name", name,
                         MatchMode.ANYWHERE));
