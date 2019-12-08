@@ -1,4 +1,4 @@
-# Clinica Veterinária Habbit
+# Habbit Veterinary Clinic
 Veterinary clinic system using Java / Hibernate / Vraptor
  
 ## OBS 
