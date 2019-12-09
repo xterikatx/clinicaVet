@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="br">
 <head>
@@ -54,13 +55,13 @@
       
       <div style="padding: 10px; margin-top:15px;"><br>
         <label for="">Nome:</label><br>
-        <input id="" type="text" value="Bunny R" minlength="5"><br>
+        <input id="" type="text" name="employee.name" value="${employee.name}" minlength="5"><br>
         <label for="">CPF:</label><br>
-        <input type="cpf" value="000.000.000-00" type="cpf" name="cpf" minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" ><br>
+        <input type="cpf" name= "employee.cpf" value="${employee.cpf}" type="cpf" name="cpf" minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" ><br>
         <label for="">Celular:</label><br>
-        <input type="tell" value="88-91001-0000" name="tel" min="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)" ><br>
+        <input type="tell" name="{employee.name}" value="${employee.cellphone}" name="tel" min="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)" ><br>
         <label for="">Senha:</label><br>
-        <input type="password" value="12345678"><br>
+        <input type="password" name="{employee.password}" value="${employee.password}"><br>
       </div>
       <input class="btalt" type="submit" value="Alterar">
       
