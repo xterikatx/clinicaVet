@@ -24,5 +24,9 @@ public class PageAdmController {
     public void pageAdm(){
      
     }
+    @Get("profile")
+    public void admProfile(){
+        
+    }
 
 }

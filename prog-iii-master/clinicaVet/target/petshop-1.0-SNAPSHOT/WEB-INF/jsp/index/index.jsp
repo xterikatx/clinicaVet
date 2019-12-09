@@ -25,15 +25,15 @@
         <header>
             <nav style="z-index: 1;">
                 <div class="logo" style="cursor: pointer;">
-                    <a href="index.html" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
+                    <a href="${pageContext.request.contextPath}/" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
                 </div>
                 <ul>
-                    <li><a href="index.html" title="Pagina Inicial">Início</a></li>
+                    <li><a href="${pageContext.request.contextPath}/" title="Pagina Inicial">Início</a></li>
                     <li><a href="auth/signin">Agendar consultas</a></li>
                     <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Serviços</a></li>
 
                     <div class="dropdown">
-                        <button class="dropbtn">Fucionário</button>
+                        <button class="dropbtn">Funcionário</button>
                         <div class="dropdown-content">
                             <a href="auth/signin">Entrar</a>
                         </div>

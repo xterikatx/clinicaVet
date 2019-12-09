@@ -26,7 +26,7 @@
   <header>
     <nav style="z-index: 1;">
       <div class="logo" style="cursor: pointer;">
-        <a href="index.html" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
+        <a href="${pageContext.request.contextPath}/page" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
       </div>
       <ul>
         <li><a href="${pageContext.request.contextPath}/query/query">Agendar consultas</a></li>
@@ -35,7 +35,7 @@
         <div class="dropdown">
           <button class="dropbtn">${userSession.cpf}</button>
           <div class="dropdown-content">
-            <a href="client.html">Meu Perfil</a>
+            <a href="${pageContext.request.contextPath}/profile">Meu Perfil</a>
             <a href="auth/signout">Sair</a>
           </div>
         </div> 
