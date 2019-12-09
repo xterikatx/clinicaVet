@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div align="center"><h5>${msg}</h5></div>
+        <div align="center" style="color: white; background-color: rgb(8, 118, 182); padding: 4px; border-radius: 3px;"><h5>${msg}</h5></div>
 
         <form action="search" method="post">
             <div class="form-row align-items-center" style="padding: 0px 30px;">

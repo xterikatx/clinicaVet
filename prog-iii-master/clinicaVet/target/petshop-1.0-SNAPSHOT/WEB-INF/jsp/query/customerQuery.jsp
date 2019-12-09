@@ -22,7 +22,7 @@
         <form action="newQuery" method="post" class="login-form">
             <img id="back" type="image" src="${pageContext.request.contextPath}/icon/back.png" value="Voltar" onClick="history.go(-1)" >
             
-            <div align="center"><h5>${msg}</h5></div>
+            <div align="center" style="color: white; background-color: rgb(8, 118, 182); padding: 4px; border-radius: 3px;"><h5>${msg}</h5></div>
 
 
             <h1>Agendar consulta</h1>
