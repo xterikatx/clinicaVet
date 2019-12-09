@@ -44,6 +44,25 @@ public class EmployeeRepository {
         }
     }
     
+    //listando todos os dados
+    public static List<Employee> listAll() { //lista - ARRAY...
+        //chamando conexão
+        EntityManager manager = ConnectionFactory.getManager();
+        //método que serve pra fazer busca no banco através de objetos.
+        Session session = (Session) manager.getDelegate();
+        //dentro do session surge uma criteria. 
+        //a criteria faz busca em uma determinada class.
+        //-> Query.class.
+        //É necessário uma session para ter uma criteria.
+        Criteria criteria = session.createCriteria(Employee.class);
+        //declarando um array, e colocando dentro dele, tudo que a criteria
+        //achou na classe Query.
+        List<Employee> employee = criteria.list();
+        //fechando conexão
+        manager.close();
+        //retornando a lista...
+        return employee;
+    }
 
 
     public static void update(Employee employee) {
@@ -134,16 +153,24 @@ public class EmployeeRepository {
              manager.close();
         }
      }
-   public List<Employee> FindForIlike(String name) {
+  //metodo de buscar
+    public List<Employee> FindForIlike(String name) {
         EntityManager manager = ConnectionFactory.getManager();
+        //método que serve pra fazer busca no banco através de objetos.
         Session session = (Session) manager.
                 getDelegate();
         Criteria c = session.createCriteria(Employee.class);
-
+        
+        //tratamento de erro para caso o nome seja "null"
+        if (name == null) {
+            name = "";
+        }
+        
+        //criando restrição, nela, vai passar o que é obrigado usar o método
+        //ilike para fazer a pesquisa. matchMode: orderBy
         c.add(Restrictions.
-                ilike("nome", name,
+                ilike("name", name,
                         MatchMode.ANYWHERE));
-        c.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
         List<Employee> employee = c.list();
         manager.close();
         return employee;

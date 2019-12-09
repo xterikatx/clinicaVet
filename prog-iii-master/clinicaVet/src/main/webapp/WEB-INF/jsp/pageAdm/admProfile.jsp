@@ -28,7 +28,7 @@
         <div class="dropdown">
           <button class="dropbtn">${userSession.cpf}</button>
           <div class="dropdown-content">
-            <a href="${pageContext.request.contextPath}/profile">Meu Perfil</a>
+            <a href="${pageContext.request.contextPath}/listEmployee">Listar Funcionários</a>
             <a href="auth/signout">Sair</a>
           </div>
         </div> 
@@ -58,9 +58,9 @@
         <label for="">CPF:</label><br>
         <input type="cpf" name= "employee.cpf" value="${employee.cpf}" type="cpf" name="cpf" minlength="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" ><br>
         <label for="">Celular:</label><br>
-        <input type="tell" name="{employee.name}" value="${employee.cellphone}" name="tel" min="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)" ><br>
+        <input type="tell" name="employee.name" value="${employee.cellphone}" name="tel" min="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)" ><br>
         <label for="">Senha:</label><br>
-        <input type="password" name="{employee.password}" value="${employee.password}"><br>
+        <input type="password" name="employee.password" value="${employee.password}"><br>
       </div>
       <input class="btalt" type="submit" value="Alterar">
       

@@ -35,7 +35,7 @@
         <div class="dropdown">
           <button class="dropbtn">${userSession.cpf}</button>
           <div class="dropdown-content">
-            <a href="${pageContext.request.contextPath}/profile">Meu Perfil</a>
+            <a href="${pageContext.request.contextPath}/listEmployee">Listar Funcionários</a>
             <a href="auth/signout">Sair</a>
           </div>
         </div> 
@@ -98,7 +98,6 @@
                 Se necessário, realizamos vários procedimentos 
                 cirúgicos em nossa clínica. Agende uma consulta.
               </p>
-              <a class="bt" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -115,7 +114,6 @@
                 Aqui também é lugar de embelezar nossos lindos pets.
                 Confira e agende o seu horário.
               </p>
-              <a class="bt" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -132,7 +130,6 @@
                 Seu pet ainda mais bonito, cachorro, gato, 
                 coelho os melhores serviços para o seu pet
               </p>
-              <a class="bt" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -149,7 +146,6 @@
                 Se necessário, realizamos vários procedimentos 
                 cirúgicos em nossa clínica. Agende uma consulta.
               </p>
-              <a class="bt" href="#">Saiba mais</a>
             </div>
           </div>
         </div>

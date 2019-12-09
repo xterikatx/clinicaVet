@@ -40,7 +40,8 @@
                     <div class="dropdown">
                         <button class="dropbtn">${userSession.cpf}</button>
                         <div class="dropdown-content">
-            <a href="${pageContext.request.contextPath}/auth/listEmployee">Listar Funcionários</a>
+                        <a href="${pageContext.request.contextPath}/listEmployee">Listar Funcionários</a>
+
                             <a href="login.html">Sair</a>
                         </div>
                     </div> 
@@ -51,31 +52,16 @@
         <div style="margin-top:100px; position: relative; padding: 20px;">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Agendamentos</h2>
+                    <h2>Listagem de Funcionários</h2>
                 </div>
                 <div class="col-sm-6 text-right h2">
                     <!-- <a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Novo Cliente</a> -->
-                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/query/listQuery"><i class="fa fa-refresh"></i> Atualizar</a>
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/listEmployee"><i class="fa fa-refresh"></i> Atualizar</a>
                 </div>
             </div>
         </div>
 
         <div align="center"><h5>${msg}</h5></div>
-
-        <form action="search" method="post">
-            <div class="form-row align-items-center" style="padding: 0px 30px;">
-                <div class="col-auto">
-                    <label class="sr-only" for="teste">Username</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control" id="teste" placeholder="Pesquisar por nome" name="query.name" value="${query.name}">
-                    </div>
-                </div>
-
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
-                </div>
-            </div>
-        </form>
 
 
         <div style="margin-top:20px; width: 100%;  padding: 30px;">
@@ -86,23 +72,15 @@
                         <th width="30%">CPF/CNPJ</th>
                         <th>Nome</th>
                         <th>Telefonte</th>
-                        <th>Data/Hora</th>
-                        <th>Opções</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach items="${querys}" var="query">
+                    <c:forEach items="${employee}" var="employee">
                         <tr>
-                            <td>${query.getId()}</td>
-                            <td>${query.getCpf()}</td>
-                            <td>${query.getName()}</td>
-                            <td>${query.getPhone()}</td>
-                            <td>${query.getCreatedAt()}</td>
-
-                            <td>
-                                <a href="${pageContext.request.contextPath}/query/remove/${query.getId()}">Remover</a>
-                            </td>
-
+                            <td>${employee.getId()}</td>
+                            <td>${employee.getCpf()}</td>
+                            <td>${employee.getName()}</td>
+                            <td>${employee.getCellphone()}</td>
                         </tr>
                     </c:forEach>
                     <!--   <tr>
