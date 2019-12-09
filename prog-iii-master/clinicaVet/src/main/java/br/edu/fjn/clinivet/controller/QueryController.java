@@ -59,18 +59,21 @@ public class QueryController {
         result.include("querys", querys);
     }
 
-    //controlador que remove o id
-    @Get("remove/{id}")
+   @Get("remove/{id}")
     public void remove(Integer id) {
         //instanciando o query repositorio, como se fosse uma variavel
         QueryRepository queryrepository = new QueryRepository();
         //if(){
-        // JOptionPane.showMessageDialog(msg,"thank you for using java");
-        // }
-        //chamando o metodo deletebyid no repositorio
-        queryrepository.DeletebyId(id);
-        //redicionando para a página query
-        result.redirectTo(this).query();
+         int Answer = JOptionPane.showConfirmDialog(null,"Deseja remover a consulta ?","Exclusão",JOptionPane.YES_NO_OPTION);
+         if (Answer==JOptionPane.YES_OPTION){
+             //chamando o metodo deletebyid no repositorio
+             queryrepository.DeletebyId(id);
+             result.redirectTo(this).query();
+         }
+         if (Answer==JOptionPane.NO_OPTION){
+             //redicionando para a página query
+             result.redirectTo(this).query();
+         }
     }
 
     //controlador que faz a busca por nome
