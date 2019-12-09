@@ -5,7 +5,6 @@ br/edu/fjn/clinivet/controller/EmployeeController.class
 br/edu/fjn/clinivet/model/employee/Employee.class
 br/edu/fjn/clinivet/model/teste/Executavel.class
 br/edu/fjn/clinivet/view/components/UserSession.class
-br/edu/fjn/clinivet/controller/ServiceController.class
 br/edu/fjn/clinivet/controller/QueryController.class
 br/edu/fjn/clinivet/interceptors/AuthInterceptor.class
 br/edu/fjn/clinivet/controller/AuthController.class
@@ -13,6 +12,3 @@ br/edu/fjn/clinivet/controller/IndexController.class
 br/edu/fjn/clinivet/model/query/Query.class
 br/edu/fjn/clinivet/repository/util/ConnectionFactory.class
 br/edu/fjn/clinivet/controller/PageAdmController.class
-br/edu/fjn/clinivet/repository/ServiceRepository.class
-br/edu/fjn/clinivet/annotations/Public.class
-br/edu/fjn/clinivet/model/service/Services.class
