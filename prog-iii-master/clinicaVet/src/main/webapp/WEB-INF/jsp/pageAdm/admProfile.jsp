@@ -29,7 +29,7 @@
           <button class="dropbtn">${userSession.cpf}</button>
           <div class="dropdown-content">
             <a href="${pageContext.request.contextPath}/profile">Meu Perfil</a>
-            <a href="login.html">Sair</a>
+            <a href="auth/signout">Sair</a>
           </div>
         </div> 
       </ul>
