@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="img/png" href="../icon/logo.png" />
-  <title>Pagina do Cliente</title>
+    <link rel="icon" type="img/png" href="${pageContext.request.contextPath}/img/pessoa.jpg" />
+
+  <title>Editar dados ADM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="img/png" href="icon/logo.png" />
@@ -17,19 +19,16 @@
   <header>
     <nav style="z-index: 1;">
       <div class="logo" style="cursor: pointer;">
-        <a href="index.html" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
+        <a href="${pageContext.request.contextPath}/page" title="Home Page"><img src="icon/logo.png" alt="logo"></a>
       </div>
       <ul>
-        <li><a href="index.html" title="Pagina Inicial">Início</a></li>
-        <li><a href="consulta.html">Agendar consultas</a></li>
-        <li><a href="index.html#ancora" class="ancora" title="Serviços Disponíveis">Serviços</a></li>
+        <li><a href="${pageContext.request.contextPath}/page" title="Pagina Inicial">In�cio</a></li>
+        <li><a href="${pageContext.request.contextPath}/query/query">Agendar consultas</a></li>
+        <li><a href="index.html#ancora" class="ancora" title="Serviços Disponíveis">Servi�os</a></li>
         <div class="dropdown">
-          <button class="dropbtn">Username</button>
+          <button class="dropbtn">${userSession.cpf}</button>
           <div class="dropdown-content">
-            <a href="admperfil.html">Meu Perfil</a>
-            <a href="login.html">Entrar</a>
-            <a href="signin.html">Cadastro</a>
-            <a href="adm.html">Administrador</a>
+            <a href="${pageContext.request.contextPath}/profile">Meu Perfil</a>
             <a href="login.html">Sair</a>
           </div>
         </div> 
@@ -40,7 +39,7 @@
   <div id="info">
     <div class="perfil">
       <div class="fotoperfil">
-        <div><img id="cir" src="../img/pessoa.jpg">
+        <div><img id="cir" src="${pageContext.request.contextPath}/img/pessoa.jpg">
         </div>
       </div><!--Final da div fotoperfil -->
       
@@ -49,7 +48,7 @@
 
   <form action="">
     <div style="border-radius: 10px; border: 2px solid rgb(236, 236, 236); width: 650px; height:350px; background: rgb(255, 255, 255); margin-top:120px; margin-left: 150px; margin-bottom: 100px; padding: 15px;">
-      <a style="margin-bottom: 100px; font-weight: bold; font-size: 20px; margin-left: 15px; position: relative; top: 5px;" >Acesso e Segurança</a>
+      <a style="margin-bottom: 100px; font-weight: bold; font-size: 20px; margin-left: 15px; position: relative; top: 5px;" >Acesso e Seguran�a</a>
       
       <img class="hv" src="icon/lock.png" style="height: 50px; width: 50px; position: absolute; margin-left: 390px; margin-top: 1px;">
       
