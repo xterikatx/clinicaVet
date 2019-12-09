@@ -25,7 +25,6 @@
       <ul>
         <li><a href="${pageContext.request.contextPath}/page" title="Pagina Inicial">Início</a></li>
         <li><a href="${pageContext.request.contextPath}/query/query">Agendar consultas</a></li>
-        <li><a href="index.html#ancora" class="ancora" title="ServiÃ§os DisponÃ­veis">Serviços</a></li>
         <div class="dropdown">
           <button class="dropbtn">${userSession.cpf}</button>
           <div class="dropdown-content">
@@ -47,7 +46,7 @@
     </div><!--Final da div perfil-->
   </div>
 
-  <form action="">
+        <form action="" method="post">
     <div style="border-radius: 10px; border: 2px solid rgb(236, 236, 236); width: 650px; height:350px; background: rgb(255, 255, 255); margin-top:120px; margin-left: 150px; margin-bottom: 100px; padding: 15px;">
       <a style="margin-bottom: 100px; font-weight: bold; font-size: 20px; margin-left: 15px; position: relative; top: 5px;" >Acesso e Segurança</a>
       

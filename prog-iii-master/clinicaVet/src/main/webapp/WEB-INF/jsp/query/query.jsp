@@ -34,13 +34,13 @@
                 </div>
                 <ul>
                     <li><a href="${pageContext.request.contextPath}/page" title="Pagina Inicial">Inicio</a></li>
-                    <li><a href="#ancora" class="ancora" title="Serviços Disponíveis">Agendamentos</a></li>
+                    <li><a href="${pageContext.request.contextPath}/query/query">Agendar consultas</a></li>
                     <li><a href="${pageContext.request.contextPath}/query/update" class="ancora" title="Serviços Disponíveis">Editar Consulta</a></li>
 
                     <div class="dropdown">
                         <button class="dropbtn">${userSession.cpf}</button>
                         <div class="dropdown-content">
-                            <a href="client.html">Meu Perfil</a>
+                            <a href="${pageContext.request.contextPath}/profile">Meu Perfil</a>
                             <a href="login.html">Sair</a>
                         </div>
                     </div> 
