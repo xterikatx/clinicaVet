@@ -1,5 +1,5 @@
 # Habbit Veterinary Clinic
-Veterinary clinic system using Java / Hibernate / Vraptor
+Veterinary clinic system using Java / JPA with Hibernate / Vraptor / Postgres / 
  
 ## Note 
 
